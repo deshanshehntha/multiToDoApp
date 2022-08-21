@@ -8,16 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--dailyDiaryStoryId-->
-        <scene sceneID="CED-0W-RTq">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="dailyDiaryStoryId" storyboardName="DailyDiaryScreen" referencedIdentifier="dailyDiaryStoryId" id="0ui-ud-j1I" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4iR-2J-e9P"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oPM-OJ-Xvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1518.840579710145" y="-92.410714285714278"/>
-        </scene>
         <!--ToDoListBoardId-->
         <scene sceneID="vtc-i7-X5b">
             <objects>
@@ -43,15 +33,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="To Do List"/>
                                 <connections>
                                     <segue destination="ruN-cp-LWd" kind="show" id="a6a-rC-9NJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-yi-jyb">
-                                <rect key="frame" x="136" y="194" width="94" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Daily Diary"/>
-                                <connections>
-                                    <segue destination="0ui-ud-j1I" kind="show" id="SS1-Es-zAj"/>
                                 </connections>
                             </button>
                         </subviews>
