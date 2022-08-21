@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16CF661828B1E45300094ECB /* HandleToDoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CF661728B1E45300094ECB /* HandleToDoList.storyboard */; };
 		16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CF661928B1EFFA00094ECB /* ToDoListController.swift */; };
+		48BF4EF228B200C000D0CCAA /* DailyDiaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */; };
 		AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18728AA963D00CA9FCD /* AppDelegate.swift */; };
 		AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */; };
 		AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18B28AA963D00CA9FCD /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		16CF661728B1E45300094ECB /* HandleToDoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HandleToDoList.storyboard; sourceTree = "<group>"; };
 		16CF661928B1EFFA00094ECB /* ToDoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
+		48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyDiaryScreen.storyboard; sourceTree = "<group>"; };
 		AD36E18428AA963D00CA9FCD /* multiToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E18728AA963D00CA9FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = ToDoList;
 			sourceTree = "<group>";
 		};
+		48BF4EF028B2009B00D0CCAA /* DailyDiary */ = {
+			isa = PBXGroup;
+			children = (
+				48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */,
+			);
+			path = DailyDiary;
+			sourceTree = "<group>";
+		};
 		AD36E17B28AA963D00CA9FCD = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		AD36E18628AA963D00CA9FCD /* multiToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				48BF4EF028B2009B00D0CCAA /* DailyDiary */,
 				16CF661628B1E40500094ECB /* ToDoList */,
 				AD36E18728AA963D00CA9FCD /* AppDelegate.swift */,
 				AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */,
@@ -248,6 +259,7 @@
 				AD36E19428AA964000CA9FCD /* LaunchScreen.storyboard in Resources */,
 				AD36E19128AA964000CA9FCD /* Assets.xcassets in Resources */,
 				16CF661828B1E45300094ECB /* HandleToDoList.storyboard in Resources */,
+				48BF4EF228B200C000D0CCAA /* DailyDiaryScreen.storyboard in Resources */,
 				AD36E18F28AA963D00CA9FCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
