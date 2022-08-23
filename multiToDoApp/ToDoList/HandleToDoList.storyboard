@@ -13,105 +13,32 @@
             <objects>
                 <viewController storyboardIdentifier="ToDoListBoardId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ToDoListController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwz-9d-NHE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="956"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0Z-Tc-ee9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="956"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-Na-Krx" userLabel="HeaderView">
-                                                <rect key="frame" x="0.0" y="-42" width="414" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Things Done with ToDo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsx-0o-cXQ">
-                                                <rect key="frame" x="-1" y="5" width="414" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus.square.on.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nMt-wp-KPA">
-                                                <rect key="frame" x="314" y="80" width="34" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZcV-ey-s4d">
-                                                <rect key="frame" x="264" y="80" width="25" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list.bullet.rectangle.portrait" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ru2-Wq-BMg">
-                                                <rect key="frame" x="221" y="80" width="25" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="R0Z-Tc-ee9" firstAttribute="height" secondItem="Zwz-9d-NHE" secondAttribute="height" priority="250" id="5j5-dt-p3Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="R0Z-Tc-ee9" secondAttribute="trailing" id="6QO-Pp-L6k"/>
-                                    <constraint firstItem="R0Z-Tc-ee9" firstAttribute="leading" secondItem="Zwz-9d-NHE" secondAttribute="leading" id="XiA-IT-Oau"/>
-                                    <constraint firstAttribute="bottom" secondItem="R0Z-Tc-ee9" secondAttribute="bottom" id="hG3-Mm-RBO"/>
-                                    <constraint firstItem="R0Z-Tc-ee9" firstAttribute="top" secondItem="Zwz-9d-NHE" secondAttribute="top" id="nVU-93-lJZ"/>
-                                    <constraint firstItem="R0Z-Tc-ee9" firstAttribute="width" secondItem="Zwz-9d-NHE" secondAttribute="width" id="rqq-mC-Lvk"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="X6x-G2-yDk"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="eJ3-2E-hO1"/>
-                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-Na-Krx" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Things Done with ToDo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsx-0o-cXQ">
+                                <rect key="frame" x="20" y="85" width="253" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Zwz-9d-NHE" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="34" id="MSk-j6-XXp"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="Zwz-9d-NHE" secondAttribute="top" constant="44" id="WBM-Rj-Gwq"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Zwz-9d-NHE" secondAttribute="trailing" id="aGL-8k-0Kp"/>
-                            <constraint firstItem="Zwz-9d-NHE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yaC-gT-RWo"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GIt-gH-Q9W">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="b4L-5L-UWa"/>
-                    </navigationItem>
-                    <size key="freeformSize" width="414" height="1000"/>
-                    <connections>
-                        <outlet property="HeaderImage" destination="0VO-Na-Krx" id="2Ka-Xf-KWm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="64.955357142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bKw-nA-6Ci">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z58-SR-ZhR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2L-2q-5od">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.97289949655532837" green="0.93585222959518433" blue="0.03555697575211525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.97289949655532837" green="0.93585222959518433" blue="0.03555697575211525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Vln-vE-qEK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o4X-ve-qad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="64.955357142857139"/>
+            <point key="canvasLocation" x="38" y="-29"/>
         </scene>
     </scenes>
     <resources>
         <image name="HeaderBg" width="960" height="540"/>
-        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
