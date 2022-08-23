@@ -12,7 +12,6 @@ class ToDoListController: UIViewController {
     @IBOutlet weak var HeaderImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.HeaderImage.layer.cornerRadius = 10
         
     }
     
