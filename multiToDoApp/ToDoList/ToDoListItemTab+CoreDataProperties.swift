@@ -16,8 +16,8 @@ extension ToDoListItemTab {
         return NSFetchRequest<ToDoListItemTab>(entityName: "ToDoListItemTab")
     }
 
-    @NSManaged public var createdAt: Date?
     @NSManaged public var note: String?
+    @NSManaged public var createdAt: Date?
     @NSManaged public var plannedDate: Date?
     @NSManaged public var noteDescription: String?
     @NSManaged public var status: String?
