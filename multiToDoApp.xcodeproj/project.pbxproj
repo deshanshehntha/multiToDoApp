@@ -11,7 +11,7 @@
 		1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1663DEAC28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift */; };
 		1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1663DEAD28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift */; };
 		16CF661828B1E45300094ECB /* HandleToDoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CF661728B1E45300094ECB /* HandleToDoList.storyboard */; };
-		16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CF661928B1EFFA00094ECB /* ToDoListController.swift */; };
+		16CF661A28B1EFFA00094ECB /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CF661928B1EFFA00094ECB /* ToDoListViewController.swift */; };
 		48BF4EF228B200C000D0CCAA /* DailyDiaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */; };
 		AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18728AA963D00CA9FCD /* AppDelegate.swift */; };
 		AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */; };
@@ -46,7 +46,7 @@
 		1663DEAC28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoListItemTab+CoreDataClass.swift"; path = "multiToDoApp/ToDoListItemTab+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		1663DEAD28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItemTab+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		16CF661728B1E45300094ECB /* HandleToDoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HandleToDoList.storyboard; sourceTree = "<group>"; };
-		16CF661928B1EFFA00094ECB /* ToDoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
+		16CF661928B1EFFA00094ECB /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyDiaryScreen.storyboard; sourceTree = "<group>"; };
 		AD36E18428AA963D00CA9FCD /* multiToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E18728AA963D00CA9FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				1663DEAC28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift */,
 				1663DEAD28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift */,
 				16CF661728B1E45300094ECB /* HandleToDoList.storyboard */,
-				16CF661928B1EFFA00094ECB /* ToDoListController.swift */,
+				16CF661928B1EFFA00094ECB /* ToDoListViewController.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 				1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */,
 				AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */,
 				1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */,
-				16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */,
+				16CF661A28B1EFFA00094ECB /* ToDoListViewController.swift in Sources */,
 				1663DEA728B54534000E0FDB /* ToDoListModel.xcdatamodeld in Sources */,
 				AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */,
 				AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */,
