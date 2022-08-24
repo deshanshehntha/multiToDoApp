@@ -8,16 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--dailyDiaryStoryId-->
-        <scene sceneID="CED-0W-RTq">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="dailyDiaryStoryId" storyboardName="DailyDiaryScreen" referencedIdentifier="dailyDiaryStoryId" id="0ui-ud-j1I" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4iR-2J-e9P"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oPM-OJ-Xvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1518.840579710145" y="-92.410714285714278"/>
-        </scene>
         <!--ToDoListBoardId-->
         <scene sceneID="vtc-i7-X5b">
             <objects>
@@ -45,15 +35,6 @@
                                     <segue destination="ruN-cp-LWd" kind="show" id="a6a-rC-9NJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-yi-jyb">
-                                <rect key="frame" x="136" y="194" width="94" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Daily Diary"/>
-                                <connections>
-                                    <segue destination="0ui-ud-j1I" kind="show" id="SS1-Es-zAj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,38 +45,143 @@
             </objects>
             <point key="canvasLocation" x="952" y="177"/>
         </scene>
-        <!--Diary-->
+        <!--Diary Main View Controller-->
         <scene sceneID="5eZ-Go-YCQ">
             <objects>
-                <viewController id="Zyn-BA-aEy" sceneMemberID="viewController">
+                <viewController id="Zyn-BA-aEy" customClass="DiaryMainViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbn-ct-IAq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="SB4-0m-xyu" userLabel="HeaderView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="gya-e5-YfD" userLabel="Header Image">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="gya-e5-YfD" userLabel="HeaderView">
-                                <rect key="frame" x="10" y="10" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Things Recorded with Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-VE-w2g">
-                                <rect key="frame" x="20" y="85" width="286" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Things Recorded with Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-9O-320" userLabel="Diary Header Label">
+                                <rect key="frame" x="20" y="98" width="314" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mns-SW-pPh" userLabel="Welcome Label">
+                                <rect key="frame" x="20" y="161" width="314" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's keep your story recorded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pth-JS-hgL" userLabel="Sub Title Label">
+                                <rect key="frame" x="20" y="190.5" width="148" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVn-5b-81O" userLabel="Add Button">
+                                <rect key="frame" x="20" y="222.5" width="49.5" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fJp-Lk-xvm" kind="show" id="12H-ws-dtj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zB1-O8-y2F"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="MCI-9O-320" firstAttribute="top" secondItem="zB1-O8-y2F" secondAttribute="top" constant="10" id="1ku-2d-dyD"/>
+                            <constraint firstItem="MCI-9O-320" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="DZO-C3-vWK"/>
+                            <constraint firstItem="pth-JS-hgL" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="Nd1-HD-shk"/>
+                            <constraint firstItem="IVn-5b-81O" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="V35-8r-rsM"/>
+                            <constraint firstItem="pth-JS-hgL" firstAttribute="top" secondItem="mns-SW-pPh" secondAttribute="bottom" constant="10" id="X4r-ws-YQI"/>
+                            <constraint firstItem="mns-SW-pPh" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="bTc-lI-kRy"/>
+                            <constraint firstItem="zB1-O8-y2F" firstAttribute="trailing" secondItem="mns-SW-pPh" secondAttribute="trailing" constant="80" id="e8J-Re-V73"/>
+                            <constraint firstItem="mns-SW-pPh" firstAttribute="top" secondItem="MCI-9O-320" secondAttribute="bottom" constant="40" id="gt0-KI-Xsb"/>
+                            <constraint firstItem="zB1-O8-y2F" firstAttribute="trailing" secondItem="MCI-9O-320" secondAttribute="trailing" constant="80" id="oaa-L0-2UE"/>
+                            <constraint firstItem="IVn-5b-81O" firstAttribute="top" secondItem="pth-JS-hgL" secondAttribute="bottom" constant="20" id="xX8-0u-8qy"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Diary" image="book" catalog="system" id="k1K-y4-kug"/>
+                    <navigationItem key="navigationItem" id="auq-Q3-oQB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftD-Zc-AbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="-579"/>
+            <point key="canvasLocation" x="647.82608695652175" y="-579.24107142857144"/>
+        </scene>
+        <!--Diary Add View Controller-->
+        <scene sceneID="MUR-dX-Fus">
+            <objects>
+                <viewController id="fJp-Lk-xvm" customClass="DiaryAddViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RFN-aI-mst">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-sl-Wit" userLabel="Header Image">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="BZY-t0-qqD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's create your Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="297-jI-hy3" userLabel="Diary Add Header Label">
+                                <rect key="frame" x="20" y="98" width="314" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-gw-Ekz">
+                                <rect key="frame" x="20" y="161" width="374" height="216"/>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lrs-Om-kiK" userLabel="Diary description">
+                                <rect key="frame" x="20" y="400" width="374" height="289"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AQ-Ww-xmL" userLabel="Diary Add Button">
+                                <rect key="frame" x="20" y="705" width="374" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="KII-5F-1s6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Record">
+                                            <attributes>
+                                                <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.94740530390291411" blue="0.089836642429193092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VB7-k0-wIG"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="297-jI-hy3" firstAttribute="leading" secondItem="VB7-k0-wIG" secondAttribute="leading" constant="20" id="6Gb-FG-2Ko"/>
+                            <constraint firstItem="4AQ-Ww-xmL" firstAttribute="top" secondItem="lrs-Om-kiK" secondAttribute="bottom" constant="16" id="6tI-8E-NZa"/>
+                            <constraint firstItem="q7r-sl-Wit" firstAttribute="top" secondItem="RFN-aI-mst" secondAttribute="top" id="Axr-Qo-v51"/>
+                            <constraint firstItem="lrs-Om-kiK" firstAttribute="leading" secondItem="7Qf-gw-Ekz" secondAttribute="leading" id="Cvz-pb-Gxp"/>
+                            <constraint firstItem="lrs-Om-kiK" firstAttribute="trailing" secondItem="7Qf-gw-Ekz" secondAttribute="trailing" id="Hi2-WF-Zz4"/>
+                            <constraint firstItem="q7r-sl-Wit" firstAttribute="leading" secondItem="RFN-aI-mst" secondAttribute="leading" id="IsV-Uv-PUA"/>
+                            <constraint firstItem="297-jI-hy3" firstAttribute="top" secondItem="VB7-k0-wIG" secondAttribute="top" constant="10" id="Jo0-Ge-WkK"/>
+                            <constraint firstItem="q7r-sl-Wit" firstAttribute="centerX" secondItem="7Qf-gw-Ekz" secondAttribute="centerX" id="Pls-Ga-wZF"/>
+                            <constraint firstItem="VB7-k0-wIG" firstAttribute="trailing" secondItem="297-jI-hy3" secondAttribute="trailing" constant="80" id="VEX-nf-dMj"/>
+                            <constraint firstItem="VB7-k0-wIG" firstAttribute="bottom" secondItem="4AQ-Ww-xmL" secondAttribute="bottom" constant="77" id="VYz-4h-Nwz"/>
+                            <constraint firstItem="lrs-Om-kiK" firstAttribute="trailing" secondItem="4AQ-Ww-xmL" secondAttribute="trailing" id="hoF-Um-fxo"/>
+                            <constraint firstItem="VB7-k0-wIG" firstAttribute="trailing" secondItem="7Qf-gw-Ekz" secondAttribute="trailing" constant="20" id="iWb-ZP-tW2"/>
+                            <constraint firstItem="lrs-Om-kiK" firstAttribute="leading" secondItem="4AQ-Ww-xmL" secondAttribute="leading" id="jcl-Jg-3dW"/>
+                            <constraint firstItem="7Qf-gw-Ekz" firstAttribute="leading" secondItem="VB7-k0-wIG" secondAttribute="leading" constant="20" id="r0Z-s6-N8L"/>
+                            <constraint firstItem="lrs-Om-kiK" firstAttribute="top" secondItem="7Qf-gw-Ekz" secondAttribute="bottom" constant="23" id="sWh-IU-eVn"/>
+                            <constraint firstItem="7Qf-gw-Ekz" firstAttribute="top" secondItem="297-jI-hy3" secondAttribute="bottom" constant="40" id="xOC-Wl-MxH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EJb-mr-eU0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJe-tv-Qgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.31884057971018" y="194.86607142857142"/>
         </scene>
         <!--Event-->
         <scene sceneID="3Ck-21-6mG">
@@ -125,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Meu-mq-qcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="-579"/>
+            <point key="canvasLocation" x="1379.7101449275362" y="-579.24107142857144"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="h0C-1Q-6sZ">
@@ -155,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vv6-SJ-mHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="-579"/>
+            <point key="canvasLocation" x="2079.7101449275365" y="-579.24107142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QdR-ym-0BS">
@@ -167,7 +253,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Zyn-BA-aEy" kind="relationship" relationship="viewControllers" id="G8h-f5-GLI"/>
+                        <segue destination="xwl-HX-rOt" kind="relationship" relationship="viewControllers" id="G8h-f5-GLI"/>
                         <segue destination="WRc-tH-PeL" kind="relationship" relationship="viewControllers" id="xcf-tV-jxD"/>
                         <segue destination="miO-nw-AWp" kind="relationship" relationship="viewControllers" id="7Da-FD-kie"/>
                         <segue destination="gGR-b1-qs5" kind="relationship" relationship="viewControllers" id="x0w-PK-JOw"/>
@@ -206,6 +292,25 @@
             </objects>
             <point key="canvasLocation" x="-983" y="-579"/>
         </scene>
+        <!--Diary-->
+        <scene sceneID="vJB-fu-nnb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xwl-HX-rOt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diary" image="book" catalog="system" id="k1K-y4-kug"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mPl-JE-omB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zyn-BA-aEy" kind="relationship" relationship="rootViewController" id="qwV-za-pby"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwT-cy-P34" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.31884057971018" y="-579.24107142857144"/>
+        </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -219,6 +324,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
