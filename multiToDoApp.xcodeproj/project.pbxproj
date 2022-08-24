@@ -99,6 +99,14 @@
 			path = DailyDiary;
 			sourceTree = "<group>";
 		};
+		AD11C30028B2829E002A6946 /* EventManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD4F312D28B50E5000B64439 /* Models */,
+			);
+			path = EventManager;
+			sourceTree = "<group>";
+		};
 		AD36E17B28AA963D00CA9FCD = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +130,7 @@
 		AD36E18628AA963D00CA9FCD /* multiToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				AD11C30028B2829E002A6946 /* EventManager */,
 				48BF4EF028B2009B00D0CCAA /* DailyDiary */,
 				16CF661628B1E40500094ECB /* ToDoList */,
 				AD36E18728AA963D00CA9FCD /* AppDelegate.swift */,
@@ -150,6 +159,13 @@
 				AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */,
 			);
 			path = multiToDoAppUITests;
+			sourceTree = "<group>";
+		};
+		AD4F312D28B50E5000B64439 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

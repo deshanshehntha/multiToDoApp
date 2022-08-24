@@ -80,6 +80,10 @@
                                 <rect key="frame" x="10" y="10" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="jCc-Gk-YFH" userLabel="HeaderView">
+                                <rect key="frame" x="20" y="20" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Things Recorded with Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-VE-w2g">
                                 <rect key="frame" x="20" y="85" width="286" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -98,34 +102,33 @@
             <point key="canvasLocation" x="-262" y="-579"/>
         </scene>
         <!--Event-->
-        <scene sceneID="3Ck-21-6mG">
+        <scene sceneID="hBe-vZ-NDY">
             <objects>
-                <viewController id="WRc-tH-PeL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="arN-sh-EaX">
+                <viewController id="Frk-pN-jDZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hou-Xo-7w9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="tlo-Jp-Til" userLabel="HeaderView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="Lkz-pn-Bdc" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lets arrange and plan Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz9-C0-RPW">
-                                <rect key="frame" x="20" y="73" width="286" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-LX-VG2">
+                                <rect key="frame" x="132" y="75" width="62" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="K4I-aA-an8"/>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                        <color key="tintColor" systemColor="labelColor"/>
+                        <viewLayoutGuide key="safeArea" id="hXK-3e-IVn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Event" image="sparkles" catalog="system" id="qit-fu-Uf7"/>
+                    <tabBarItem key="tabBarItem" title="Event" image="paperclip" catalog="system" id="YrK-Uy-UXc"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Meu-mq-qcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTW-Dl-h5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="-579"/>
+            <point key="canvasLocation" x="439" y="-571"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="h0C-1Q-6sZ">
@@ -168,9 +171,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="Zyn-BA-aEy" kind="relationship" relationship="viewControllers" id="G8h-f5-GLI"/>
-                        <segue destination="WRc-tH-PeL" kind="relationship" relationship="viewControllers" id="xcf-tV-jxD"/>
                         <segue destination="miO-nw-AWp" kind="relationship" relationship="viewControllers" id="7Da-FD-kie"/>
                         <segue destination="gGR-b1-qs5" kind="relationship" relationship="viewControllers" id="x0w-PK-JOw"/>
+                        <segue destination="Frk-pN-jDZ" kind="relationship" relationship="viewControllers" id="uNq-Dt-OKW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq9-4s-Tae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,15 +216,9 @@
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="chart.pie" catalog="system" width="128" height="121"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
-        <image name="sparkles" catalog="system" width="112" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="paperclip" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
