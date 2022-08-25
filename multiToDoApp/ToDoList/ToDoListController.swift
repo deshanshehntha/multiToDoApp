@@ -40,6 +40,7 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         listTableView.delegate = self
         listTableView.dataSource = self
         listTableView.frame = view.bounds
+        getAllListItems()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,6 +52,56 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         let cell = listTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.note
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = models[indexPath.row]
+        
+        /*let myDatePicker: UIDatePicker = UIDatePicker()
+            myDatePicker.preferredDatePickerStyle = .wheels
+            myDatePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)*/
+        
+        let sheet = UIAlertController(title: "To Do Item", message: nil, preferredStyle: .actionSheet)
+        
+        //alert.view.addSubview(myDatePicker)
+        
+        
+        //alert.addAction(continueAction)
+        sheet.addAction(UIAlertAction(title:"Cancel", style: .cancel, handler: nil))
+        sheet.addAction(UIAlertAction(title: "Update", style: .default, handler: {_ in
+            let alert = UIAlertController(title: "Update To Do Item", message: nil, preferredStyle: .alert)
+
+            alert.addTextField { (textField) in
+                textField.placeholder = "Note"
+                textField.text = item.note
+            }
+            alert.addTextField { (textField) in
+                textField.placeholder = "Note Description"
+                textField.text = item.noteDescription
+            }
+            alert.addTextField { (textField) in
+                textField.placeholder = "Status"
+                textField.text = item.status
+            }
+            
+            let editAction = UIAlertAction(title: "Update",style: .default) { [weak alert] _ in
+                guard let textFields = alert?.textFields else { return }
+                                                
+                if let noteText = textFields[0].text,
+                let noteDescText = textFields[1].text,
+                   let statusText = textFields[2].text {
+
+                       self.updateToDoItem(item: item, newNote: noteText, newNoteDesc: noteDescText, newPlannedDate: Date(), newStatus: statusText)
+                }
+            }
+            alert.addAction(editAction)
+            self.present(alert, animated: true)
+        }))
+        sheet.addAction(UIAlertAction(title:"Delete", style: .destructive, handler: {[weak self] _ in
+            self?.deleteToDoItem(item: item)
+        }))
+        present(sheet, animated: true)
     }
 
     @IBAction func onClickAddItem(_ sender: Any) {
