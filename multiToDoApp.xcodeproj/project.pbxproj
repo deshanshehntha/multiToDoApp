@@ -23,6 +23,7 @@
 		AD36E19F28AA964000CA9FCD /* multiToDoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E19E28AA964000CA9FCD /* multiToDoAppTests.swift */; };
 		AD36E1A928AA964000CA9FCD /* multiToDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1A828AA964000CA9FCD /* multiToDoAppUITests.swift */; };
 		AD36E1AB28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */; };
+		AD6A290A28B718EF0008C376 /* EventManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290928B718EF0008C376 /* EventManagerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		AD36E1A428AA964000CA9FCD /* multiToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multiToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E1A828AA964000CA9FCD /* multiToDoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITests.swift; sourceTree = "<group>"; };
 		AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD6A290928B718EF0008C376 /* EventManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManagerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,14 @@
 			path = DailyDiary;
 			sourceTree = "<group>";
 		};
+		AD11C30028B2829E002A6946 /* EventManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD6A290928B718EF0008C376 /* EventManagerController.swift */,
+			);
+			path = EventManager;
+			sourceTree = "<group>";
+		};
 		AD36E17B28AA963D00CA9FCD = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		AD36E18628AA963D00CA9FCD /* multiToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				AD11C30028B2829E002A6946 /* EventManager */,
 				48BF4EF028B2009B00D0CCAA /* DailyDiary */,
 				16CF661628B1E40500094ECB /* ToDoList */,
 				AD36E18728AA963D00CA9FCD /* AppDelegate.swift */,
@@ -296,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6A290A28B718EF0008C376 /* EventManagerController.swift in Sources */,
 				1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */,
 				AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */,
 				48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */,
