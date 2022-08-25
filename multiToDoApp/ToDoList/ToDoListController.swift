@@ -62,7 +62,7 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
             myDatePicker.preferredDatePickerStyle = .wheels
             myDatePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)*/
         
-        let sheet = UIAlertController(title: "Update To Do Item", message: nil, preferredStyle: .actionSheet)
+        let sheet = UIAlertController(title: "To Do Item", message: nil, preferredStyle: .actionSheet)
         
         //alert.view.addSubview(myDatePicker)
         
