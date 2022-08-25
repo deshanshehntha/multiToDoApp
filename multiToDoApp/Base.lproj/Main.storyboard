@@ -11,7 +11,7 @@
         <!--dailyDiaryStoryId-->
         <scene sceneID="CED-0W-RTq">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="dailyDiaryStoryId" storyboardName="DailyDiaryScreen" referencedIdentifier="dailyDiaryStoryId" id="0ui-ud-j1I" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="dailyDiaryStoryId" referencedIdentifier="dailyDiaryStoryId" id="0ui-ud-j1I" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4iR-2J-e9P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPM-OJ-Xvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,42 +91,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEr-sF-lrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1522.4637681159422" y="24.776785714285712"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-IJ-rfw">
-                                <rect key="frame" x="80" y="430" width="126" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="To Do List"/>
-                                <connections>
-                                    <segue destination="ruN-cp-LWd" kind="show" id="a6a-rC-9NJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-yi-jyb">
-                                <rect key="frame" x="136" y="194" width="94" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Daily Diary"/>
-                                <connections>
-                                    <segue destination="0ui-ud-j1I" kind="show" id="SS1-Es-zAj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="kPR-8X-f4A"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2299" y="135"/>
         </scene>
         <!--Diary-->
         <scene sceneID="5eZ-Go-YCQ">
