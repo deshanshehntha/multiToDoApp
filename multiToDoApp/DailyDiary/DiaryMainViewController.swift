@@ -10,11 +10,15 @@ import UIKit
 class DiaryMainViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        let image = UIImage(named: "HeaderBg.jpg")
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundImage = UIImage(named: "HeaderBg.jpg")
     
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
+    }
 
     /*
     // MARK: - Navigation
