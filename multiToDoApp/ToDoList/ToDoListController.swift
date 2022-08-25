@@ -11,8 +11,14 @@ class ToDoListController: UIViewController {
 
     @IBOutlet weak var HeaderImage: UIImageView!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+
+        let image = UIImage(named: "HeaderBg.jpg")
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundImage = UIImage(named: "HeaderBg.jpg")
+    
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
     }
     
 
