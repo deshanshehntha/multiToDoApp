@@ -23,6 +23,11 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
     
     private var models = [ToDoListItemTab]()
     
+    var myDatePicker: UIDatePicker = UIDatePicker()
+    var addAlert = UIAlertController()
+    var updateAlert = UIAlertController()
+    
+    
     let dateFormatter = DateFormatter()
     //dateFormatter.dateFormat = "yyyy-MM-dd"
     
@@ -51,6 +56,7 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         let model = models[indexPath.row]
         let cell = listTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.note
+        
         return cell
     }
     
@@ -58,45 +64,52 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         tableView.deselectRow(at: indexPath, animated: true)
         let item = models[indexPath.row]
         
-        /*let myDatePicker: UIDatePicker = UIDatePicker()
-            myDatePicker.preferredDatePickerStyle = .wheels
-            myDatePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)*/
-        
+        createDatePicker()
         let sheet = UIAlertController(title: "To Do Item", message: nil, preferredStyle: .actionSheet)
-        
-        //alert.view.addSubview(myDatePicker)
-        
-        
-        //alert.addAction(continueAction)
-        sheet.addAction(UIAlertAction(title:"Cancel", style: .cancel, handler: nil))
-        sheet.addAction(UIAlertAction(title: "Update", style: .default, handler: {_ in
-            let alert = UIAlertController(title: "Update To Do Item", message: nil, preferredStyle: .alert)
 
-            alert.addTextField { (textField) in
+        sheet.addAction(UIAlertAction(title:"Cancel", style: .cancel, handler: nil))
+        sheet.addAction(UIAlertAction(title: "Update", style: .default, handler: { [self]_ in
+            self.updateAlert = UIAlertController(title: "Update To Do Item", message: nil, preferredStyle: .alert)
+
+            self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Note"
                 textField.text = item.note
             }
-            alert.addTextField { (textField) in
+            self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Note Description"
                 textField.text = item.noteDescription
             }
-            alert.addTextField { (textField) in
+            self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Status"
                 textField.text = item.status
             }
+            updateAlert.addTextField { (textField) in
+                textField.placeholder = "YYYY-MM-DD"
+                textField.text = item.plannedDate?.description
+                textField.inputView = self.myDatePicker
+                let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(self.dateUpdChanged))
+                let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 44))
+                toolBar.setItems([UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil), doneButton], animated: true)
+                textField.inputAccessoryView = toolBar
+            }
             
-            let editAction = UIAlertAction(title: "Update",style: .default) { [weak alert] _ in
-                guard let textFields = alert?.textFields else { return }
+            let editAction = UIAlertAction(title: "Update",style: .default) { [weak updateAlert] _ in
+                guard let textFields = updateAlert?.textFields else { return }
                                                 
                 if let noteText = textFields[0].text,
                 let noteDescText = textFields[1].text,
                    let statusText = textFields[2].text {
 
-                       self.updateToDoItem(item: item, newNote: noteText, newNoteDesc: noteDescText, newPlannedDate: Date(), newStatus: statusText)
+                    self.updateToDoItem(item: item, newNote: noteText, newNoteDesc: noteDescText, newPlannedDate: self.myDatePicker.date, newStatus: statusText)
                 }
             }
-            alert.addAction(editAction)
-            self.present(alert, animated: true)
+               let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+                   print("Cancel button tapped")
+               }
+            
+            updateAlert.addAction(editAction)
+            updateAlert.addAction(cancel)
+            self.present(updateAlert, animated: true)
         }))
         sheet.addAction(UIAlertAction(title:"Delete", style: .destructive, handler: {[weak self] _ in
             self?.deleteToDoItem(item: item)
@@ -105,39 +118,67 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
     }
 
     @IBAction func onClickAddItem(_ sender: Any) {
-        /*let myDatePicker: UIDatePicker = UIDatePicker()
-            myDatePicker.preferredDatePickerStyle = .wheels
-            myDatePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)*/
+        createDatePicker()
+        addAlert = UIAlertController(title: "New To Do Item", message: "Enter New To Do Item", preferredStyle: .alert)
         
-        let alert = UIAlertController(title: "New To Do Item", message: "Enter New To Do Item", preferredStyle: .alert)
-        
-        //alert.view.addSubview(myDatePicker)
-        
-        alert.addTextField { (textField) in
+        addAlert.addTextField { (textField) in
             textField.placeholder = "Note"
         }
         
-        alert.addTextField { (textField) in
+        addAlert.addTextField { (textField) in
             textField.placeholder = "Note Description"
         }
         
-        alert.addTextField { (textField) in
+        addAlert.addTextField { (textField) in
             textField.placeholder = "Status"
         }
         
-        let continueAction = UIAlertAction(title: "Submit",style: .default) { [weak alert] _ in
-            guard let textFields = alert?.textFields else { return }
+        addAlert.addTextField { (textField) in
+            textField.placeholder = "YYYY-MM-DD"
+            textField.inputView = self.myDatePicker
+            let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(self.dateChanged))
+            let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 44))
+            toolBar.setItems([UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil), doneButton], animated: true)
+            textField.inputAccessoryView = toolBar
+        }
+        
+        let continueAction = UIAlertAction(title: "Submit",style: .default) { [weak addAlert] _ in
+            guard let textFields = addAlert?.textFields else { return }
                                             
             if let noteText = textFields[0].text,
             let noteDescText = textFields[1].text,
                let statusText = textFields[2].text {
 
-                   self.createToDoItem(note: noteText, noteDesc: noteDescText, plannedDate: Date(), status: statusText)                      }
+                self.createToDoItem(note: noteText, noteDesc: noteDescText, plannedDate: self.myDatePicker.date, status: statusText)                      }
         }
-        alert.addAction(continueAction)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
         
-        present(alert, animated: true)
+        addAlert.addAction(continueAction)
+        addAlert.addAction(cancel)
+        
+        present(addAlert, animated: true)
     }
+    
+    func createDatePicker(){
+        myDatePicker.preferredDatePickerStyle = .wheels
+        myDatePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)
+        myDatePicker.timeZone = .current
+        myDatePicker.backgroundColor = UIColor.white
+        myDatePicker.datePickerMode = .dateAndTime
+    }
+    
+    @objc func dateChanged() {
+        addAlert.textFields?.last?.text = "\(myDatePicker.date)"
+        print(myDatePicker.date)
+    }
+    
+    @objc func dateUpdChanged() {
+        updateAlert.textFields?.last?.text = "\(myDatePicker.date)"
+        print(myDatePicker.date)
+    }
+    
     func getAllListItems(){
         do {
             models = try context.fetch(ToDoListItemTab.fetchRequest())
@@ -161,7 +202,6 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         do {
             try context.save()
             getAllListItems()
-            print("Harini")
             models = try context.fetch(ToDoListItemTab.fetchRequest())
             print(models)
         }catch {
