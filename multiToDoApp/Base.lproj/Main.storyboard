@@ -137,16 +137,6 @@
             </objects>
             <point key="canvasLocation" x="-503" y="1035"/>
         </scene>
-        <!--ToDoListBoardId-->
-        <scene sceneID="vtc-i7-X5b">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ToDoListBoardId" storyboardName="HandleToDoList" referencedIdentifier="ToDoListBoardId" id="ruN-cp-LWd" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="d6g-er-Vzw"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IEr-sF-lrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1522.4637681159422" y="24.776785714285712"/>
-        </scene>
         <!--Let's arrange and plan Events-->
         <scene sceneID="6fG-u9-yfv">
             <objects>
@@ -290,14 +280,34 @@
                     <view key="view" contentMode="scaleToFill" id="noV-zt-vJL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8n1-s8-ySV">
+                                <rect key="frame" x="0.0" y="153" width="414" height="743"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl1-i1-fS5">
+                                <rect key="frame" x="322" y="106" width="34" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus.square.on.square" catalog="system"/>
+                                <connections>
+                                    <action selector="onClickAddItem:" destination="lmU-lL-wCL" eventType="touchUpInside" id="kZm-ct-Fek"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pFy-pd-5dC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Get things done with ToDo" id="2q4-So-bo6"/>
+                    <connections>
+                        <outlet property="AddItemButton" destination="sl1-i1-fS5" id="aMb-H9-miL"/>
+                        <outlet property="SubView" destination="8n1-s8-ySV" id="n18-S5-Dem"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGj-30-m9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-988" y="165"/>
+            <point key="canvasLocation" x="-988.40579710144937" y="164.73214285714286"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="5Tc-dy-L2W">
@@ -343,6 +353,7 @@
         <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <image name="hands.sparkles.fill" catalog="system" width="125" height="128"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
