@@ -6,16 +6,14 @@
 //
 
 import UIKit
+import CoreData
 
-class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
+class ToDoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    @IBOutlet weak var HeaderImage: UIImageView!
-    
     @IBOutlet weak var AddItemButton: UIButton!
-    @IBOutlet weak var SubView: UIView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var listTableView: UITableView! = {
+    @IBOutlet weak var listTableView: UITableView! = {
         let listTable = UITableView()
         listTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return listTable
@@ -27,19 +25,11 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
     //dateFormatter.dateFormat = "yyyy-MM-dd"
     
     override func viewDidLoad() {
-
-        let image = UIImage(named: "HeaderBg.jpg")
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundImage = UIImage(named: "HeaderBg.jpg")
-    
-        navigationItem.standardAppearance = appearance
-        navigationItem.scrollEdgeAppearance = appearance
-        navigationItem.compactAppearance = appearance
-        
-        SubView.addSubview(listTableView)
-        listTableView.delegate = self
-        listTableView.dataSource = self
-        listTableView.frame = view.bounds
+        super.viewDidLoad()
+        //view.addSubview(listTableView)
+        //listTableView.delegate = self
+        //listTableView.dataSource = self
+        //listTableView.frame = view.bounds
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +42,7 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         cell.textLabel?.text = model.note
         return cell
     }
-
+    
     @IBAction func onClickAddItem(_ sender: Any) {
         /*let myDatePicker: UIDatePicker = UIDatePicker()
             myDatePicker.preferredDatePickerStyle = .wheels
