@@ -11,8 +11,10 @@
 		1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1663DEAC28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift */; };
 		1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1663DEAD28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift */; };
 		16CF661828B1E45300094ECB /* HandleToDoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CF661728B1E45300094ECB /* HandleToDoList.storyboard */; };
-		16CF661A28B1EFFA00094ECB /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CF661928B1EFFA00094ECB /* ToDoListViewController.swift */; };
-		48BF4EF228B200C000D0CCAA /* DailyDiaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */; };
+		16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CF661928B1EFFA00094ECB /* ToDoListController.swift */; };
+		485E029D28B666D700DD1084 /* DiaryAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E029C28B666D700DD1084 /* DiaryAddViewController.swift */; };
+		48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */; };
+		AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F71F528B7693400F719F8 /* TrackerViewController.swift */; };
 		AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18728AA963D00CA9FCD /* AppDelegate.swift */; };
 		AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */; };
 		AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18B28AA963D00CA9FCD /* ViewController.swift */; };
@@ -22,6 +24,9 @@
 		AD36E19F28AA964000CA9FCD /* multiToDoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E19E28AA964000CA9FCD /* multiToDoAppTests.swift */; };
 		AD36E1A928AA964000CA9FCD /* multiToDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1A828AA964000CA9FCD /* multiToDoAppUITests.swift */; };
 		AD36E1AB28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */; };
+		AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290928B718EF0008C376 /* CreateEventController.swift */; };
+		AD6A290C28B71EEE0008C376 /* EventHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290B28B71EEE0008C376 /* EventHomeController.swift */; };
+		AD6A290E28B7595A0008C376 /* EventNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290D28B7595A0008C376 /* EventNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +51,10 @@
 		1663DEAC28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoListItemTab+CoreDataClass.swift"; path = "multiToDoApp/ToDoListItemTab+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		1663DEAD28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItemTab+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		16CF661728B1E45300094ECB /* HandleToDoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HandleToDoList.storyboard; sourceTree = "<group>"; };
-		16CF661928B1EFFA00094ECB /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
-		48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyDiaryScreen.storyboard; sourceTree = "<group>"; };
+		16CF661928B1EFFA00094ECB /* ToDoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
+		485E029C28B666D700DD1084 /* DiaryAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddViewController.swift; sourceTree = "<group>"; };
+		48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainViewController.swift; sourceTree = "<group>"; };
+		AD1F71F528B7693400F719F8 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		AD36E18428AA963D00CA9FCD /* multiToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E18728AA963D00CA9FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +68,9 @@
 		AD36E1A428AA964000CA9FCD /* multiToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multiToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E1A828AA964000CA9FCD /* multiToDoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITests.swift; sourceTree = "<group>"; };
 		AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD6A290928B718EF0008C376 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
+		AD6A290B28B71EEE0008C376 /* EventHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeController.swift; sourceTree = "<group>"; };
+		AD6A290D28B7595A0008C376 /* EventNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +104,7 @@
 				1663DEAC28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift */,
 				1663DEAD28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift */,
 				16CF661728B1E45300094ECB /* HandleToDoList.storyboard */,
-				16CF661928B1EFFA00094ECB /* ToDoListViewController.swift */,
+				16CF661928B1EFFA00094ECB /* ToDoListController.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -102,9 +112,20 @@
 		48BF4EF028B2009B00D0CCAA /* DailyDiary */ = {
 			isa = PBXGroup;
 			children = (
-				48BF4EF128B200C000D0CCAA /* DailyDiaryScreen.storyboard */,
+				48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */,
+				485E029C28B666D700DD1084 /* DiaryAddViewController.swift */,
 			);
 			path = DailyDiary;
+			sourceTree = "<group>";
+		};
+		AD11C30028B2829E002A6946 /* EventManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD6A290928B718EF0008C376 /* CreateEventController.swift */,
+				AD6A290B28B71EEE0008C376 /* EventHomeController.swift */,
+				AD6A290D28B7595A0008C376 /* EventNavigationController.swift */,
+			);
+			path = EventManager;
 			sourceTree = "<group>";
 		};
 		AD36E17B28AA963D00CA9FCD = {
@@ -130,6 +151,8 @@
 		AD36E18628AA963D00CA9FCD /* multiToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				AD6A290F28B768C20008C376 /* Tracker */,
+				AD11C30028B2829E002A6946 /* EventManager */,
 				48BF4EF028B2009B00D0CCAA /* DailyDiary */,
 				16CF661628B1E40500094ECB /* ToDoList */,
 				AD36E18728AA963D00CA9FCD /* AppDelegate.swift */,
@@ -159,6 +182,14 @@
 				AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */,
 			);
 			path = multiToDoAppUITests;
+			sourceTree = "<group>";
+		};
+		AD6A290F28B768C20008C376 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F71F528B7693400F719F8 /* TrackerViewController.swift */,
+			);
+			path = Tracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +299,6 @@
 				AD36E19428AA964000CA9FCD /* LaunchScreen.storyboard in Resources */,
 				AD36E19128AA964000CA9FCD /* Assets.xcassets in Resources */,
 				16CF661828B1E45300094ECB /* HandleToDoList.storyboard in Resources */,
-				48BF4EF228B200C000D0CCAA /* DailyDiaryScreen.storyboard in Resources */,
 				AD36E18F28AA963D00CA9FCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,13 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */,
 				1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */,
 				AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */,
+				48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */,
+				AD6A290E28B7595A0008C376 /* EventNavigationController.swift in Sources */,
 				1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */,
-				16CF661A28B1EFFA00094ECB /* ToDoListViewController.swift in Sources */,
+				16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */,
 				1663DEA728B54534000E0FDB /* ToDoListModel.xcdatamodeld in Sources */,
+				AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */,
+				AD6A290C28B71EEE0008C376 /* EventHomeController.swift in Sources */,
 				AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */,
 				AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */,
+				485E029D28B666D700DD1084 /* DiaryAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

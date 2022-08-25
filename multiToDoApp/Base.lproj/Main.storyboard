@@ -1,232 +1,353 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ii-fI-D7b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yfc-7z-pQC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Diary-->
+        <scene sceneID="GAR-Ag-xtF">
+            <objects>
+                <navigationController id="J0G-Az-jzl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diary" image="books.vertical.fill" catalog="system" id="4eS-jp-dwB"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0iX-VH-Sfx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lep-jq-Oaf" kind="relationship" relationship="rootViewController" id="NQy-86-a7N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIF-u7-whc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="-544"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="5zp-nx-h2e">
+            <objects>
+                <navigationController interfaceStyle="light" id="AIK-A6-Ldv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" image="hands.sparkles.fill" catalog="system" id="YWG-8r-OSl"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nf4-aA-isQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T5G-dZ-n6Z" kind="relationship" relationship="rootViewController" id="nRL-RL-G9h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NcL-KN-GJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="-542"/>
+        </scene>
+        <!--Tracker-->
+        <scene sceneID="v0H-G0-DlF">
+            <objects>
+                <navigationController toolbarHidden="NO" id="iOX-D5-5fq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tracker" image="chart.pie.fill" catalog="system" id="Kal-41-anr"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tiP-3Y-wla">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G7G-Ww-tOb" kind="relationship" relationship="rootViewController" id="g5y-3d-p7n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFe-NI-ZVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-542"/>
+        </scene>
         <!--dailyDiaryStoryId-->
         <scene sceneID="CED-0W-RTq">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="dailyDiaryStoryId" storyboardName="DailyDiaryScreen" referencedIdentifier="dailyDiaryStoryId" id="0ui-ud-j1I" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="dailyDiaryStoryId" referencedIdentifier="dailyDiaryStoryId" id="0ui-ud-j1I" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4iR-2J-e9P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPM-OJ-Xvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1518.840579710145" y="-92.410714285714278"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--AddNewEvent-->
+        <scene sceneID="O1J-HU-nvc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController title="AddNewEvent" id="m81-jh-Ifc" customClass="EventManagerController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l7X-0y-vSk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-yi-jyb">
-                                <rect key="frame" x="136" y="194" width="94" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-qi-5aL">
+                                <rect key="frame" x="20" y="13" width="32" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ouv-9x-tIb">
+                                <rect key="frame" x="20" y="151" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ub1-99-Z8v">
+                                <rect key="frame" x="20" y="227" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEO-GB-h96">
+                                <rect key="frame" x="20" y="306" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="XLD-Km-FFv" userLabel="HeaderView">
+                                <rect key="frame" x="-42" y="-38" width="456" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a new Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-Pv-o1k">
+                                <rect key="frame" x="45" y="44" width="149" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-6B-MGj">
+                                <rect key="frame" x="20" y="389" width="350" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSw-7h-WLg">
+                                <rect key="frame" x="20" y="697" width="350" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Daily Diary"/>
-                                <connections>
-                                    <segue destination="0ui-ud-j1I" kind="show" id="SS1-Es-zAj"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="Create">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="vrl-1p-ehg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kPR-8X-f4A"/>
+                    <navigationItem key="navigationItem" id="HHl-Mc-a57"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njY-aP-rhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="177"/>
+            <point key="canvasLocation" x="-503" y="1035"/>
         </scene>
-        <!--Diary-->
-        <scene sceneID="5eZ-Go-YCQ">
+        <!--ToDoListBoardId-->
+        <scene sceneID="vtc-i7-X5b">
             <objects>
-                <viewController id="Zyn-BA-aEy" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dbn-ct-IAq">
+                <viewControllerPlaceholder storyboardIdentifier="ToDoListBoardId" storyboardName="HandleToDoList" referencedIdentifier="ToDoListBoardId" id="ruN-cp-LWd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d6g-er-Vzw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEr-sF-lrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522.4637681159422" y="24.776785714285712"/>
+        </scene>
+        <!--Let's arrange and plan Events-->
+        <scene sceneID="6fG-u9-yfv">
+            <objects>
+                <viewController id="T5G-dZ-n6Z" customClass="EventNavigationController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lpd-BN-41C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="SB4-0m-xyu" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="gya-e5-YfD" userLabel="HeaderView">
-                                <rect key="frame" x="10" y="10" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Things Recorded with Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-VE-w2g">
-                                <rect key="frame" x="20" y="85" width="286" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="zB1-O8-y2F"/>
+                        <viewLayoutGuide key="safeArea" id="suy-xX-Zrx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Diary" image="book" catalog="system" id="k1K-y4-kug"/>
+                    <navigationItem key="navigationItem" title="Let's arrange and plan Events" id="27U-sg-0aV"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ftD-Zc-AbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZ4-r8-c7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="-579"/>
+            <point key="canvasLocation" x="490" y="165"/>
         </scene>
-        <!--Event-->
-        <scene sceneID="3Ck-21-6mG">
+        <!--Your Tracker-->
+        <scene sceneID="uw4-NS-fji">
             <objects>
-                <viewController id="WRc-tH-PeL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="arN-sh-EaX">
+                <viewController id="G7G-Ww-tOb" customClass="TrackerViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dMa-Kb-TeV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="tlo-Jp-Til" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lets arrange and plan Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz9-C0-RPW">
-                                <rect key="frame" x="20" y="73" width="286" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="K4I-aA-an8"/>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                        <color key="tintColor" systemColor="labelColor"/>
+                        <viewLayoutGuide key="safeArea" id="ylH-93-gmC"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Event" image="sparkles" catalog="system" id="qit-fu-Uf7"/>
+                    <navigationItem key="navigationItem" title="Your Tracker" id="vXn-3s-B5g"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Meu-mq-qcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBD-lJ-QdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="-579"/>
+            <point key="canvasLocation" x="1206" y="165"/>
         </scene>
-        <!--Tracker-->
-        <scene sceneID="h0C-1Q-6sZ">
+        <!--Todo-->
+        <scene sceneID="hQ8-wP-iTe">
             <objects>
-                <viewController id="miO-nw-AWp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XUb-ur-OI1">
+                <navigationController title="Todo" id="gZ1-fb-XFC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ToDo" image="list.dash" catalog="system" id="n97-st-gry"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="20o-Fi-6op">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lmU-lL-wCL" kind="relationship" relationship="rootViewController" id="mpv-6k-68P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iU-Kk-JOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-987" y="-542"/>
+        </scene>
+        <!--Get things recorded with Diary-->
+        <scene sceneID="pMf-pQ-fGU">
+            <objects>
+                <viewController id="lep-jq-Oaf" customClass="DiaryMainViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mOq-Dz-bmv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="fIM-lW-l4b" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAH-RR-T5h">
-                                <rect key="frame" x="40" y="87" width="115" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="peP-Em-aNe"/>
+                        <viewLayoutGuide key="safeArea" id="Nb7-g7-wo4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Get things recorded with Diary" id="Ifc-lo-aoH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="626-qZ-UAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="165"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="5RQ-pf-ffg">
+            <objects>
+                <collectionViewController id="wmS-Zo-ikM" customClass="EventHomeController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="U7D-qc-U8x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y25-qe-hAx">
+                            <size key="itemSize" width="402" height="108"/>
+                            <size key="headerReferenceSize" width="50" height="138"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="FjY-SE-EPT">
+                                <rect key="frame" x="6" y="138" width="402" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7dd-D9-TsO">
+                                    <rect key="frame" x="0.0" y="0.0" width="402" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlJ-GU-aeY">
+                                            <rect key="frame" x="62" y="26" width="279" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.64623618230000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="customSize" width="402" height="108"/>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionReusableView" id="HVg-oS-nw1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="8DJ-9I-Vzo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.64623618230000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="wmS-Zo-ikM" id="ZpK-60-woo"/>
+                            <outlet property="delegate" destination="wmS-Zo-ikM" id="1At-5n-Qsn"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="JI0-5M-JBc"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DV7-4K-mlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627.536231884058" y="-1352.0089285714284"/>
+        </scene>
+        <!--Get things done with ToDo-->
+        <scene sceneID="P4T-Yl-Owu">
+            <objects>
+                <viewController id="lmU-lL-wCL" customClass="ToDoListController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="noV-zt-vJL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pFy-pd-5dC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="tintColor" systemColor="systemPinkColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tracker" image="chart.pie" catalog="system" id="lwd-wl-nce"/>
+                    <navigationItem key="navigationItem" title="Get things done with ToDo" id="2q4-So-bo6"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vv6-SJ-mHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGj-30-m9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="-579"/>
+            <point key="canvasLocation" x="-988" y="165"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="5Tc-dy-L2W">
+            <objects>
+                <viewController id="5HE-6Q-gRi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ffq-cn-lKT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e3S-my-mu3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="BLN-uv-HiT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJq-Bz-80K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="-1320"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="QdR-ym-0BS">
+        <scene sceneID="7MR-fj-y6k">
             <objects>
-                <tabBarController id="7ii-fI-D7b" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d9g-cU-gSw">
+                <tabBarController id="Yfc-7z-pQC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dTf-J1-5To">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Zyn-BA-aEy" kind="relationship" relationship="viewControllers" id="G8h-f5-GLI"/>
-                        <segue destination="WRc-tH-PeL" kind="relationship" relationship="viewControllers" id="xcf-tV-jxD"/>
-                        <segue destination="miO-nw-AWp" kind="relationship" relationship="viewControllers" id="7Da-FD-kie"/>
-                        <segue destination="gGR-b1-qs5" kind="relationship" relationship="viewControllers" id="x0w-PK-JOw"/>
+                        <segue destination="gZ1-fb-XFC" kind="relationship" relationship="viewControllers" id="4M7-UN-3Wb"/>
+                        <segue destination="J0G-Az-jzl" kind="relationship" relationship="viewControllers" id="DP7-YB-69F"/>
+                        <segue destination="AIK-A6-Ldv" kind="relationship" relationship="viewControllers" id="u3m-0s-VTG"/>
+                        <segue destination="iOX-D5-5fq" kind="relationship" relationship="viewControllers" id="Ezf-uF-uGy"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rq9-4s-Tae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LA7-AZ-OXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="-1321"/>
-        </scene>
-        <!--Todo-->
-        <scene sceneID="8QS-Og-fJ0">
-            <objects>
-                <viewController storyboardIdentifier="TodoListId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gGR-b1-qs5" customClass="ToDoListViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XbA-ae-l1F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeaderBg" highlightedImage="HeaderBg" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-3o-i1n" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Things Done with ToDo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2N-CQ-dGm">
-                                <rect key="frame" x="20" y="85" width="253" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-O9-nRC">
-                                <rect key="frame" x="355" y="158" width="39" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="plus.square.on.square" catalog="system"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="onClickAddItem:" destination="gGR-b1-qs5" eventType="touchUpInside" id="a91-xP-Sp1"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-df-pAC">
-                                <rect key="frame" x="33" y="197" width="340" height="574"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="JmX-HB-mKa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Todo" image="doc.plaintext" catalog="system" id="5DH-Wa-2Hp"/>
-                    <connections>
-                        <outlet property="AddItemButton" destination="Nxc-O9-nRC" id="TOW-HC-0CR"/>
-                        <outlet property="listTableView" destination="oPZ-df-pAC" id="Mdn-bA-xhb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ct-Ya-BZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-984.05797101449286" y="-579.24107142857144"/>
+            <point key="canvasLocation" x="-280" y="-1320"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="HeaderBg" width="960" height="540"/>
-        <image name="book" catalog="system" width="128" height="99"/>
-        <image name="chart.pie" catalog="system" width="128" height="121"/>
-        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
-        <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
-        <image name="sparkles" catalog="system" width="112" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="books.vertical.fill" catalog="system" width="128" height="109"/>
+        <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
+        <image name="hands.sparkles.fill" catalog="system" width="125" height="128"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
