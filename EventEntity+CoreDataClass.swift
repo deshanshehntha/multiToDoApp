@@ -1,5 +1,5 @@
 //
-//  Event+CoreDataClass.swift
+//  EventEntity+CoreDataClass.swift
 //  multiToDoApp
 //
 //  Created by Deshan Wattegama on 2022-08-25.
@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-@objc(EventData)
-public class EventData: NSManagedObject {
+@objc(EventEntity)
+public class EventEntity: NSManagedObject {
 
     convenience init(title: String, eventDescription: String, url: String, date: String, identifier: String, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
         

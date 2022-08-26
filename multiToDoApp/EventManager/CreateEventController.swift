@@ -22,15 +22,16 @@ class CreateEventController: UIViewController {
     var eventDescription: String = ""
     var url: String = ""
     var date: String = ""
-    var event : EventData?
+    var event : EventEntity?
     var context : NSManagedObjectContext {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             return appDelegate.persistentContainer.viewContext
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let image = UIImage(named: "HeaderBg.jpg")
         let appearance = UINavigationBarAppearance()
         appearance.backgroundImage = UIImage(named: "HeaderBg.jpg")
@@ -52,11 +53,11 @@ class CreateEventController: UIViewController {
         eventTitle = eventTitleInput.text!
         eventDescription = eventDescriptionInput.text!
         url = urlInput.text!
-        date = dateInput.text!
-      
+        date = ""
+        
         let identifier = String(NSDate().timeIntervalSince1970)
 
-        _ = EventData.init(title: eventTitle, eventDescription: eventDescription, url: url, date: date, identifier: identifier, insertIntoManagedObjectContext: self.context)
+        _ = EventEntity.init(title: eventTitle, eventDescription: eventDescription, url: url, date: date, identifier: identifier, insertIntoManagedObjectContext: self.context)
 
         do
         {
@@ -65,10 +66,9 @@ class CreateEventController: UIViewController {
         catch let error as NSError {
                 print("Saving failed. \(error), \(error.userInfo)")
         }
-    
-    
         
-    }
     
 
+    }
+    
 }

@@ -11,7 +11,7 @@ import CoreData
 
 class EventHomeController: UICollectionViewController{
     
-    var event : EventData?
+    var event : EventEntity?
     var context : NSManagedObjectContext {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             return appDelegate.persistentContainer.viewContext
@@ -19,12 +19,19 @@ class EventHomeController: UICollectionViewController{
     var rowCount: Int = 0
     var historyData = [EventDataDTO]()
 
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData()
+        super.viewWillAppear(true)
+
+        self.collectionView.reloadData()
+
+    }
     
     override func viewDidLoad() {
+        fetchData()
+
         super.viewDidLoad()
 
-        fetchData()
-        
         let image = UIImage(named: "HeaderBg.jpg")
         let appearance = UINavigationBarAppearance()
         appearance.backgroundImage = UIImage(named: "HeaderBg.jpg")
@@ -76,10 +83,10 @@ class EventHomeController: UICollectionViewController{
 
     func fetchData()
     {
-    
+        
         do {
 
-            let data = try context.fetch(EventData.fetchRequest())
+            let data = try context.fetch(EventEntity.fetchRequest())
             rowCount = data.count
             
             for entry in data {
@@ -89,6 +96,8 @@ class EventHomeController: UICollectionViewController{
                 let url = entry.url!
                 let date = entry.date!
                 let identifier = entry.identifier!
+                print(title)
+                print(description)
 
 
                 historyData.append(EventDataDTO(title: title, eventDescription:  description, url: url, date: date, identifier: identifier))

@@ -250,6 +250,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onCreateButtonPressed" destination="2V8-Ok-SDN" eventType="touchUpInside" id="2ET-7Y-haA"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JX5-UQ-pOi">
                                 <rect key="frame" x="20" y="255" width="350" height="34"/>
@@ -262,6 +265,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IDj-8h-AHz"/>
+                    <connections>
+                        <outlet property="eventDescriptionInput" destination="JX5-UQ-pOi" id="IkI-Pc-cKI"/>
+                        <outlet property="eventTitleInput" destination="Y0a-0W-Yxg" id="mvU-QN-Ee5"/>
+                        <outlet property="urlInput" destination="vXr-re-rBP" id="mNH-zx-lR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M63-QE-ZgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
