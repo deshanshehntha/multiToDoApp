@@ -52,6 +52,18 @@ class EventHomeController: UICollectionViewController{
             // 2
             return historyData.count
         }
+    
+    
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+
+       let location = sender.location(in: self.collectionView)
+       let indexPath = self.collectionView.indexPathForItem(at: location)
+
+       if let index = indexPath {
+          print("Got clicked on index: \(index)!")
+       }
+    }
+    
 
         override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
@@ -64,8 +76,10 @@ class EventHomeController: UICollectionViewController{
             }
             
             if let label = cell.viewWithTag(101) as? UILabel {
-                label.text = historyData[indexPath.row].eventDescription
+                label.text = historyData[indexPath.row].date
             }
+            
+            cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
             return cell
         }
@@ -84,6 +98,8 @@ class EventHomeController: UICollectionViewController{
     func fetchData()
     {
         
+        historyData.removeAll()
+        
         do {
 
             let data = try context.fetch(EventEntity.fetchRequest())
@@ -96,10 +112,7 @@ class EventHomeController: UICollectionViewController{
                 let url = entry.url!
                 let date = entry.date!
                 let identifier = entry.identifier!
-                print(title)
-                print(description)
-
-
+               
                 historyData.append(EventDataDTO(title: title, eventDescription:  description, url: url, date: date, identifier: identifier))
             }
             

@@ -41,10 +41,10 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         navigationItem.scrollEdgeAppearance = appearance
         navigationItem.compactAppearance = appearance
         
-        SubView.addSubview(listTableView)
-        listTableView.delegate = self
-        listTableView.dataSource = self
-        listTableView.frame = view.bounds
+//        SubView.addSubview(listTableView)
+//        listTableView.delegate = self
+//        listTableView.dataSource = self
+//        listTableView.frame = view.bounds
         getAllListItems()
     }
     
