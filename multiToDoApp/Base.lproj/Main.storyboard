@@ -82,7 +82,17 @@
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fJp-Lk-xvm" kind="show" id="12H-ws-dtj"/>
+                                    <segue destination="fJp-Lk-xvm" kind="show" identifier="newDiaryEntry" id="12H-ws-dtj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGr-Jo-CSZ">
+                                <rect key="frame" x="89.5" y="222.5" width="48" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="List">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yIU-8b-HMf" kind="show" id="Egc-y3-VHt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,7 +100,9 @@
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="MCI-9O-320" firstAttribute="top" secondItem="zB1-O8-y2F" secondAttribute="top" constant="10" id="1ku-2d-dyD"/>
+                            <constraint firstItem="DGr-Jo-CSZ" firstAttribute="top" secondItem="pth-JS-hgL" secondAttribute="bottom" constant="20" id="7gm-1N-EAs"/>
                             <constraint firstItem="MCI-9O-320" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="DZO-C3-vWK"/>
+                            <constraint firstItem="DGr-Jo-CSZ" firstAttribute="leading" secondItem="IVn-5b-81O" secondAttribute="trailing" constant="20" id="EtZ-ix-TCA"/>
                             <constraint firstItem="pth-JS-hgL" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="Nd1-HD-shk"/>
                             <constraint firstItem="IVn-5b-81O" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="V35-8r-rsM"/>
                             <constraint firstItem="pth-JS-hgL" firstAttribute="top" secondItem="mns-SW-pPh" secondAttribute="bottom" constant="10" id="X4r-ws-YQI"/>
@@ -129,6 +141,7 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-gw-Ekz">
                                 <rect key="frame" x="20" y="161" width="374" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lrs-Om-kiK" userLabel="Diary description">
                                 <rect key="frame" x="20" y="400" width="374" height="289"/>
@@ -154,11 +167,31 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="1" green="0.94740530390291411" blue="0.089836642429193092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onDiaryAdd:" destination="fJp-Lk-xvm" eventType="touchUpInside" id="UlG-s0-Cnd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iH-1c-UwW" userLabel="Delete Button">
+                                <rect key="frame" x="333" y="761" width="61" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Delete">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteDiaryEntry:" destination="fJp-Lk-xvm" eventType="touchUpInside" id="5ee-Nl-Hf0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VB7-k0-wIG"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
+                            <constraint firstItem="1iH-1c-UwW" firstAttribute="top" secondItem="4AQ-Ww-xmL" secondAttribute="bottom" constant="25" id="3yt-AR-RLr"/>
                             <constraint firstItem="297-jI-hy3" firstAttribute="leading" secondItem="VB7-k0-wIG" secondAttribute="leading" constant="20" id="6Gb-FG-2Ko"/>
                             <constraint firstItem="4AQ-Ww-xmL" firstAttribute="top" secondItem="lrs-Om-kiK" secondAttribute="bottom" constant="16" id="6tI-8E-NZa"/>
                             <constraint firstItem="q7r-sl-Wit" firstAttribute="top" secondItem="RFN-aI-mst" secondAttribute="top" id="Axr-Qo-v51"/>
@@ -166,6 +199,7 @@
                             <constraint firstItem="lrs-Om-kiK" firstAttribute="trailing" secondItem="7Qf-gw-Ekz" secondAttribute="trailing" id="Hi2-WF-Zz4"/>
                             <constraint firstItem="q7r-sl-Wit" firstAttribute="leading" secondItem="RFN-aI-mst" secondAttribute="leading" id="IsV-Uv-PUA"/>
                             <constraint firstItem="297-jI-hy3" firstAttribute="top" secondItem="VB7-k0-wIG" secondAttribute="top" constant="10" id="Jo0-Ge-WkK"/>
+                            <constraint firstItem="VB7-k0-wIG" firstAttribute="trailing" secondItem="1iH-1c-UwW" secondAttribute="trailing" constant="20" id="NIG-fn-933"/>
                             <constraint firstItem="q7r-sl-Wit" firstAttribute="centerX" secondItem="7Qf-gw-Ekz" secondAttribute="centerX" id="Pls-Ga-wZF"/>
                             <constraint firstItem="VB7-k0-wIG" firstAttribute="trailing" secondItem="297-jI-hy3" secondAttribute="trailing" constant="80" id="VEX-nf-dMj"/>
                             <constraint firstItem="VB7-k0-wIG" firstAttribute="bottom" secondItem="4AQ-Ww-xmL" secondAttribute="bottom" constant="77" id="VYz-4h-Nwz"/>
@@ -178,6 +212,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EJb-mr-eU0"/>
+                    <connections>
+                        <outlet property="datePicker" destination="7Qf-gw-Ekz" id="olj-hW-ffo"/>
+                        <outlet property="descriptionField" destination="lrs-Om-kiK" id="ta6-yo-Ehu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJe-tv-Qgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,7 +349,57 @@
             </objects>
             <point key="canvasLocation" x="-262.31884057971018" y="-579.24107142857144"/>
         </scene>
+        <!--Diary Table View Controller-->
+        <scene sceneID="gk3-dr-wG6">
+            <objects>
+                <tableViewController id="yIU-8b-HMf" customClass="DiaryTableViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3Em-vt-Gj6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiaryDataIdentifier" id="yG5-bm-CYz" customClass="DiaryCell" customModule="multiToDoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yG5-bm-CYz" id="1uG-r2-4A3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9M-Ad-NQo">
+                                            <rect key="frame" x="40" y="11" width="65" height="14"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Y9M-Ad-NQo" firstAttribute="leading" secondItem="1uG-r2-4A3" secondAttribute="leadingMargin" constant="20" id="566-vV-nfR"/>
+                                        <constraint firstItem="Y9M-Ad-NQo" firstAttribute="top" secondItem="1uG-r2-4A3" secondAttribute="topMargin" id="xKl-pV-QZN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="diaryDescription" destination="Y9M-Ad-NQo" id="Wew-D8-SCa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yIU-8b-HMf" id="Pne-ac-frx"/>
+                            <outlet property="delegate" destination="yIU-8b-HMf" id="iSH-Ea-JGM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Wtb-tl-zR0"/>
+                    <connections>
+                        <segue destination="fJp-Lk-xvm" kind="show" identifier="editDiaryEntry" id="q2P-Ik-rm9"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9W-GN-EV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1032" y="195"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="12H-ws-dtj"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="HeaderBg" width="960" height="540"/>
