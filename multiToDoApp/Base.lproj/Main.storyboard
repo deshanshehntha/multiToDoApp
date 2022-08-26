@@ -297,14 +297,34 @@
                     <view key="view" contentMode="scaleToFill" id="noV-zt-vJL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yl8-k1-Yg4">
+                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql7-Jl-P8L">
+                                <rect key="frame" x="317" y="125" width="48" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus.square.on.square" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="onClickAddItem:" destination="lmU-lL-wCL" eventType="touchUpInside" id="pM8-wk-BiW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pFy-pd-5dC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Get things done with ToDo" id="2q4-So-bo6"/>
+                    <connections>
+                        <outlet property="AddItemButton" destination="Ql7-Jl-P8L" id="3k5-pN-Edn"/>
+                        <outlet property="SubView" destination="Yl8-k1-Yg4" id="qID-ca-OZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGj-30-m9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-988" y="165"/>
+            <point key="canvasLocation" x="-988.40579710144937" y="164.73214285714286"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="5Tc-dy-L2W">
@@ -349,6 +369,7 @@
         <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <image name="hands.sparkles.fill" catalog="system" width="125" height="128"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
