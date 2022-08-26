@@ -15,6 +15,8 @@
 		485E029D28B666D700DD1084 /* DiaryAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E029C28B666D700DD1084 /* DiaryAddViewController.swift */; };
 		48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */; };
 		AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F71F528B7693400F719F8 /* TrackerViewController.swift */; };
+		AD1F720628B78BAE00F719F8 /* EventDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F720528B78BAE00F719F8 /* EventDataDTO.swift */; };
+		AD1F720C28B791A200F719F8 /* EventDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD1F720A28B791A200F719F8 /* EventDataModel.xcdatamodeld */; };
 		AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18728AA963D00CA9FCD /* AppDelegate.swift */; };
 		AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */; };
 		AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18B28AA963D00CA9FCD /* ViewController.swift */; };
@@ -26,7 +28,8 @@
 		AD36E1AB28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */; };
 		AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290928B718EF0008C376 /* CreateEventController.swift */; };
 		AD6A290C28B71EEE0008C376 /* EventHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290B28B71EEE0008C376 /* EventHomeController.swift */; };
-		AD6A290E28B7595A0008C376 /* EventNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290D28B7595A0008C376 /* EventNavigationController.swift */; };
+		AD8AC43528B7C5270078A47F /* EventEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AC43328B7C5270078A47F /* EventEntity+CoreDataClass.swift */; };
+		AD8AC43628B7C5270078A47F /* EventEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AC43428B7C5270078A47F /* EventEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		485E029C28B666D700DD1084 /* DiaryAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddViewController.swift; sourceTree = "<group>"; };
 		48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainViewController.swift; sourceTree = "<group>"; };
 		AD1F71F528B7693400F719F8 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
+		AD1F720528B78BAE00F719F8 /* EventDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataDTO.swift; sourceTree = "<group>"; };
+		AD1F720B28B791A200F719F8 /* EventDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventDataModel.xcdatamodel; sourceTree = "<group>"; };
 		AD36E18428AA963D00CA9FCD /* multiToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E18728AA963D00CA9FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +75,8 @@
 		AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD6A290928B718EF0008C376 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
 		AD6A290B28B71EEE0008C376 /* EventHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeController.swift; sourceTree = "<group>"; };
-		AD6A290D28B7595A0008C376 /* EventNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNavigationController.swift; sourceTree = "<group>"; };
+		AD8AC43328B7C5270078A47F /* EventEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		AD8AC43428B7C5270078A47F /* EventEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +127,11 @@
 		AD11C30028B2829E002A6946 /* EventManager */ = {
 			isa = PBXGroup;
 			children = (
+				AD8AC43328B7C5270078A47F /* EventEntity+CoreDataClass.swift */,
+				AD8AC43428B7C5270078A47F /* EventEntity+CoreDataProperties.swift */,
 				AD6A290928B718EF0008C376 /* CreateEventController.swift */,
 				AD6A290B28B71EEE0008C376 /* EventHomeController.swift */,
-				AD6A290D28B7595A0008C376 /* EventNavigationController.swift */,
+				AD1F720528B78BAE00F719F8 /* EventDataDTO.swift */,
 			);
 			path = EventManager;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				AD36E19228AA964000CA9FCD /* LaunchScreen.storyboard */,
 				AD36E19528AA964000CA9FCD /* Info.plist */,
 				1663DEA528B54534000E0FDB /* ToDoListModel.xcdatamodeld */,
+				AD1F720A28B791A200F719F8 /* EventDataModel.xcdatamodeld */,
 			);
 			path = multiToDoApp;
 			sourceTree = "<group>";
@@ -324,14 +333,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1F720C28B791A200F719F8 /* EventDataModel.xcdatamodeld in Sources */,
 				AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */,
 				1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */,
 				AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */,
 				48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */,
-				AD6A290E28B7595A0008C376 /* EventNavigationController.swift in Sources */,
 				1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */,
+				AD8AC43628B7C5270078A47F /* EventEntity+CoreDataProperties.swift in Sources */,
+				AD8AC43528B7C5270078A47F /* EventEntity+CoreDataClass.swift in Sources */,
 				16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */,
 				1663DEA728B54534000E0FDB /* ToDoListModel.xcdatamodeld in Sources */,
+				AD1F720628B78BAE00F719F8 /* EventDataDTO.swift in Sources */,
 				AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */,
 				AD6A290C28B71EEE0008C376 /* EventHomeController.swift in Sources */,
 				AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */,
@@ -681,6 +693,16 @@
 			);
 			currentVersion = 1663DEA628B54534000E0FDB /* ToDoListModel.xcdatamodel */;
 			path = ToDoListModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		AD1F720A28B791A200F719F8 /* EventDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD1F720B28B791A200F719F8 /* EventDataModel.xcdatamodel */,
+			);
+			currentVersion = AD1F720B28B791A200F719F8 /* EventDataModel.xcdatamodel */;
+			path = EventDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
