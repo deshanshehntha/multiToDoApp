@@ -15,7 +15,7 @@ class CreateEventController: UIViewController {
     @IBOutlet var eventTitleInput:UITextField!
     @IBOutlet var eventDescriptionInput:UITextField!
     @IBOutlet var urlInput:UITextField!
-    @IBOutlet var dateInput:UITextField!
+    @IBOutlet var dateInput:UIDatePicker!
     @IBOutlet var createButton:UIButton!
 
     var eventTitle: String = ""
@@ -27,8 +27,8 @@ class CreateEventController: UIViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             return appDelegate.persistentContainer.viewContext
     }
-    
-    
+    var formatter = DateFormatter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +39,9 @@ class CreateEventController: UIViewController {
         navigationItem.standardAppearance = appearance
         navigationItem.scrollEdgeAppearance = appearance
         navigationItem.compactAppearance = appearance
+        
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
             view.addGestureRecognizer(tap)
@@ -53,7 +56,7 @@ class CreateEventController: UIViewController {
         eventTitle = eventTitleInput.text!
         eventDescription = eventDescriptionInput.text!
         url = urlInput.text!
-        date = ""
+        date = formatter.string(from: dateInput.date)
         
         let identifier = String(NSDate().timeIntervalSince1970)
 
@@ -62,13 +65,12 @@ class CreateEventController: UIViewController {
         do
         {
             try self.context.save()
+            self.navigationController?.popViewController(animated: true)
+
         }
         catch let error as NSError {
                 print("Saving failed. \(error), \(error.userInfo)")
         }
-        
-    
-
     }
     
 }
