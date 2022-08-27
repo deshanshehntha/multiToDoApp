@@ -46,8 +46,8 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         listTableView.dataSource = self
         listTableView.frame = view.bounds
         getAllListItems()
+
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
@@ -74,14 +74,18 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
             self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Note"
                 textField.text = item.note
+                textField.keyboardType = .emailAddress
             }
             self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Note Description"
                 textField.text = item.noteDescription
+                textField.keyboardType = .emailAddress
             }
+            
             self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Status"
                 textField.text = item.status
+                textField.keyboardType = .emailAddress
             }
             updateAlert.addTextField { (textField) in
                 textField.placeholder = "YYYY-MM-DD"
@@ -123,14 +127,17 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         
         addAlert.addTextField { (textField) in
             textField.placeholder = "Note"
+            textField.keyboardType = .emailAddress
         }
         
         addAlert.addTextField { (textField) in
             textField.placeholder = "Note Description"
+            textField.keyboardType = .emailAddress
         }
         
         addAlert.addTextField { (textField) in
             textField.placeholder = "Status"
+            textField.keyboardType = .emailAddress
         }
         
         addAlert.addTextField { (textField) in
