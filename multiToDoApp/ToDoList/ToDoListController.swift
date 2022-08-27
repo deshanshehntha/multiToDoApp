@@ -41,13 +41,14 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         navigationItem.scrollEdgeAppearance = appearance
         navigationItem.compactAppearance = appearance
         
-//        SubView.addSubview(listTableView)
-//        listTableView.delegate = self
-//        listTableView.dataSource = self
-//        listTableView.frame = view.bounds
+        SubView.addSubview(listTableView)
+        listTableView.delegate = self
+        listTableView.dataSource = self
+        listTableView.frame = view.bounds
+        self.addDummyData()
         getAllListItems()
+
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
@@ -74,14 +75,18 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
             self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Note"
                 textField.text = item.note
+                textField.keyboardType = .emailAddress
             }
             self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Note Description"
                 textField.text = item.noteDescription
+                textField.keyboardType = .emailAddress
             }
+            
             self.updateAlert.addTextField { (textField) in
                 textField.placeholder = "Status"
                 textField.text = item.status
+                textField.keyboardType = .emailAddress
             }
             updateAlert.addTextField { (textField) in
                 textField.placeholder = "YYYY-MM-DD"
@@ -123,14 +128,17 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         
         addAlert.addTextField { (textField) in
             textField.placeholder = "Note"
+            textField.keyboardType = .emailAddress
         }
         
         addAlert.addTextField { (textField) in
             textField.placeholder = "Note Description"
+            textField.keyboardType = .emailAddress
         }
         
         addAlert.addTextField { (textField) in
             textField.placeholder = "Status"
+            textField.keyboardType = .emailAddress
         }
         
         addAlert.addTextField { (textField) in
@@ -234,5 +242,9 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
             //error
         }
     }
-
+    func addDummyData(){
+        createToDoItem(note: "Exam", noteDesc: "Big Data", plannedDate: Date(), status: "Initial")
+        createToDoItem(note: "Cleaning", noteDesc: "Room", plannedDate: Date(), status: "In Progress")
+    }
+    
 }
