@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lep-jq-Oaf" kind="relationship" relationship="rootViewController" id="NQy-86-a7N"/>
+                        <segue destination="iuF-4j-GMX" kind="relationship" relationship="rootViewController" id="IJG-rb-Nx2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIF-u7-whc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -262,18 +263,85 @@
         <!--Get things recorded with Diary-->
         <scene sceneID="pMf-pQ-fGU">
             <objects>
-                <viewController id="lep-jq-Oaf" customClass="DiaryMainViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lep-jq-Oaf" customClass="DiaryAddViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mOq-Dz-bmv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="tfw-ae-cJd">
+                                <rect key="frame" x="20" y="108" width="374" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Dear Diary," textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bze-00-oST" userLabel="Diary Description">
+                                <rect key="frame" x="20" y="347" width="374" height="276"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-Ya-9D7" userLabel="Diary Add Button">
+                                <rect key="frame" x="20" y="652" width="374" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Record">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onDiaryEntry:" destination="lep-jq-Oaf" eventType="touchUpInside" id="mqh-nA-axk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-dQ-MxO" userLabel="Diary Delete Button">
+                                <rect key="frame" x="333.5" y="709" width="60.5" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Delete">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray4Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteDiaryEntry:" destination="lep-jq-Oaf" eventType="touchUpInside" id="DGD-dM-inx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Nb7-g7-wo4"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nb7-g7-wo4" firstAttribute="bottom" secondItem="xZX-dQ-MxO" secondAttribute="bottom" constant="76" id="0m5-z0-DLz"/>
+                            <constraint firstItem="xZX-dQ-MxO" firstAttribute="top" secondItem="Cpo-Ya-9D7" secondAttribute="bottom" constant="29" id="DXT-EV-qWX"/>
+                            <constraint firstItem="bze-00-oST" firstAttribute="leading" secondItem="Cpo-Ya-9D7" secondAttribute="leading" id="Fx7-wb-ySb"/>
+                            <constraint firstItem="bze-00-oST" firstAttribute="top" secondItem="tfw-ae-cJd" secondAttribute="bottom" constant="23" id="KUD-ph-pp8"/>
+                            <constraint firstItem="tfw-ae-cJd" firstAttribute="trailing" secondItem="bze-00-oST" secondAttribute="trailing" id="KXQ-L7-qxV"/>
+                            <constraint firstItem="Cpo-Ya-9D7" firstAttribute="trailing" secondItem="xZX-dQ-MxO" secondAttribute="trailing" id="QiM-Ty-F2u"/>
+                            <constraint firstItem="tfw-ae-cJd" firstAttribute="leading" secondItem="bze-00-oST" secondAttribute="leading" id="USs-8f-7T8"/>
+                            <constraint firstItem="tfw-ae-cJd" firstAttribute="leading" secondItem="mOq-Dz-bmv" secondAttribute="leadingMargin" id="Vl5-M9-jf3"/>
+                            <constraint firstItem="tfw-ae-cJd" firstAttribute="trailing" secondItem="mOq-Dz-bmv" secondAttribute="trailingMargin" id="aCI-wn-VwN"/>
+                            <constraint firstItem="bze-00-oST" firstAttribute="trailing" secondItem="Cpo-Ya-9D7" secondAttribute="trailing" id="gbH-p9-pys"/>
+                            <constraint firstItem="tfw-ae-cJd" firstAttribute="top" secondItem="Nb7-g7-wo4" secondAttribute="top" constant="20" id="lv8-yy-WMU"/>
+                            <constraint firstItem="Cpo-Ya-9D7" firstAttribute="top" secondItem="bze-00-oST" secondAttribute="bottom" constant="29" id="uhE-rN-N82"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Get things recorded with Diary" id="Ifc-lo-aoH"/>
+                    <connections>
+                        <outlet property="datePicker" destination="tfw-ae-cJd" id="e8a-3J-e6a"/>
+                        <outlet property="descriptionField" destination="bze-00-oST" id="Ekt-7s-FGq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="626-qZ-UAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-252" y="165"/>
+            <point key="canvasLocation" x="-265" y="927"/>
         </scene>
         <!--Lets arrange and plan Events-->
         <scene sceneID="QGj-Ly-LGp">
@@ -439,6 +507,71 @@
             </objects>
             <point key="canvasLocation" x="-988.40579710144937" y="164.73214285714286"/>
         </scene>
+        <!--Get things recorded with Diary-->
+        <scene sceneID="j3q-QX-s1G">
+            <objects>
+                <tableViewController id="iuF-4j-GMX" customClass="DiaryTableViewController" customModule="multiToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="d8o-y8-VZi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiaryDataIdentifier" id="cOo-dF-5Vy" customClass="DiaryCell" customModule="multiToDoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cOo-dF-5Vy" id="vev-j0-mOs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znu-nW-C1v" userLabel="Diary Description">
+                                            <rect key="frame" x="40" y="16" width="334" height="14"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="znu-nW-C1v" firstAttribute="top" secondItem="vev-j0-mOs" secondAttribute="topMargin" constant="5" id="5UB-YU-FIU"/>
+                                        <constraint firstItem="znu-nW-C1v" firstAttribute="leading" secondItem="vev-j0-mOs" secondAttribute="leadingMargin" constant="20" id="Dd5-Xx-lMy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="znu-nW-C1v" secondAttribute="trailing" constant="20" id="icJ-ze-Whm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="diaryDescription" destination="znu-nW-C1v" id="jFE-9Q-wlo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iuF-4j-GMX" id="VzY-OG-VDp"/>
+                            <outlet property="delegate" destination="iuF-4j-GMX" id="EeP-QR-QfN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Get things recorded with Diary" id="F3A-Rp-hJb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6GE-jG-RG4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lsa-KI-Hkk">
+                                <rect key="frame" x="342.5" y="5" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="" cornerStyle="small">
+                                    <imageReference key="image" image="plus.square.on.square.fill" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.9474053039" blue="0.089836642430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="lep-jq-Oaf" kind="show" identifier="addDiaryEntry" id="ru3-fh-scc"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="lep-jq-Oaf" kind="show" identifier="editDiaryEntry" id="vHF-is-4DZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcU-hZ-dPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="172"/>
+        </scene>
         <!--Item 1-->
         <scene sceneID="5Tc-dy-L2W">
             <objects>
@@ -476,6 +609,9 @@
             <point key="canvasLocation" x="-280" y="-1320"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ru3-fh-scc"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="HeaderBg" width="960" height="540"/>
@@ -487,9 +623,18 @@
         <image name="m2H7K9A0Z5m2G6b1" width="720" height="507"/>
         <image name="plus.square.fill.on.square.fill" catalog="system" width="128" height="113"/>
         <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
+        <image name="plus.square.on.square.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

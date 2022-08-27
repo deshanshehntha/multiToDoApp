@@ -13,6 +13,10 @@
 		16CF661828B1E45300094ECB /* HandleToDoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CF661728B1E45300094ECB /* HandleToDoList.storyboard */; };
 		16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CF661928B1EFFA00094ECB /* ToDoListController.swift */; };
 		485E029D28B666D700DD1084 /* DiaryAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E029C28B666D700DD1084 /* DiaryAddViewController.swift */; };
+		485E02A928B7DCDC00DD1084 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E02A828B7DCDC00DD1084 /* DiaryTableViewController.swift */; };
+		485E02AC28B7DE3100DD1084 /* DiaryItemList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E02AA28B7DE3100DD1084 /* DiaryItemList+CoreDataClass.swift */; };
+		485E02AD28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E02AB28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift */; };
+		485E02AF28B7E11900DD1084 /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E02AE28B7E11900DD1084 /* DiaryCell.swift */; };
 		48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */; };
 		AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F71F528B7693400F719F8 /* TrackerViewController.swift */; };
 		AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18728AA963D00CA9FCD /* AppDelegate.swift */; };
@@ -54,6 +58,10 @@
 		16CF661728B1E45300094ECB /* HandleToDoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HandleToDoList.storyboard; sourceTree = "<group>"; };
 		16CF661928B1EFFA00094ECB /* ToDoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListController.swift; sourceTree = "<group>"; };
 		485E029C28B666D700DD1084 /* DiaryAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAddViewController.swift; sourceTree = "<group>"; };
+		485E02A828B7DCDC00DD1084 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		485E02AA28B7DE3100DD1084 /* DiaryItemList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryItemList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		485E02AB28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryItemList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		485E02AE28B7E11900DD1084 /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
 		48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainViewController.swift; sourceTree = "<group>"; };
 		AD1F71F528B7693400F719F8 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		AD36E18428AA963D00CA9FCD /* multiToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,11 +119,31 @@
 			path = ToDoList;
 			sourceTree = "<group>";
 		};
-		48BF4EF028B2009B00D0CCAA /* DailyDiary */ = {
+		485E02A228B743C800DD1084 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */,
 				485E029C28B666D700DD1084 /* DiaryAddViewController.swift */,
+				485E02A828B7DCDC00DD1084 /* DiaryTableViewController.swift */,
+				485E02AE28B7E11900DD1084 /* DiaryCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		485E02A328B743E300DD1084 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				485E02AB28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift */,
+				485E02AA28B7DE3100DD1084 /* DiaryItemList+CoreDataClass.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		48BF4EF028B2009B00D0CCAA /* DailyDiary */ = {
+			isa = PBXGroup;
+			children = (
+				485E02A328B743E300DD1084 /* CoreData */,
+				485E02A228B743C800DD1084 /* ViewControllers */,
 			);
 			path = DailyDiary;
 			sourceTree = "<group>";
@@ -327,9 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485E02A928B7DCDC00DD1084 /* DiaryTableViewController.swift in Sources */,
 				AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */,
 				1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */,
 				AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */,
+				485E02AF28B7E11900DD1084 /* DiaryCell.swift in Sources */,
+				485E02AC28B7DE3100DD1084 /* DiaryItemList+CoreDataClass.swift in Sources */,
+				485E02AD28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift in Sources */,
 				48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */,
 				1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */,
 				AD8AC43628B7C5270078A47F /* EventEntity+CoreDataProperties.swift in Sources */,
