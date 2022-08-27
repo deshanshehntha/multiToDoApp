@@ -17,7 +17,7 @@ class EventHomeController: UICollectionViewController{
             return appDelegate.persistentContainer.viewContext
         }
     var rowCount: Int = 0
-    var historyData = [EventDataDTO]()
+    var historyData = [EventEntity]()
     var alert = UIAlertController()
     var datePicker: UIDatePicker = UIDatePicker()
     var formatter = DateFormatter()
@@ -72,21 +72,21 @@ class EventHomeController: UICollectionViewController{
 
     }
     
-    func showViewScreen(item : EventDataDTO) {
+    func showViewScreen(item : EventEntity) {
         alert = UIAlertController(title: "View Your Event", message: "", preferredStyle: .alert)
 
         alert.addTextField { (textField) in
-            textField.text = "Title : " + item.title
+            textField.text = "Title : " + item.title!
             textField.isEnabled = false
         }
 
         alert.addTextField { (textField) in
-            textField.text =  "Desc : " + item.eventDescription
+            textField.text =  "Desc : " + item.eventDescription!
             textField.isEnabled = false
         }
 
         alert.addTextField { (textField) in
-            textField.text =  "url : " + item.url
+            textField.text =  "url : " + item.url!
             textField.isEnabled = false
         }
 
@@ -95,7 +95,7 @@ class EventHomeController: UICollectionViewController{
             textField.isEnabled = false
         }
         
-        let editAction = UIAlertAction(title: "Edit",style: .default) { [weak alert] _ in
+        let modifyAction = UIAlertAction(title: "Modify", style: .default) { [weak alert] _ in
             self.showEditScreen(item: item)
         }
         
@@ -103,14 +103,14 @@ class EventHomeController: UICollectionViewController{
             self.alert.dismiss(animated: true)
         }
 
-        alert.addAction(editAction)
+        alert.addAction(modifyAction)
         alert.addAction(cancelAction)
 
         present(alert, animated: true)
         
     }
     
-    func showEditScreen(item : EventDataDTO) {
+    func showEditScreen(item : EventEntity) {
         alert = UIAlertController(title: "Edit Your Event", message: "", preferredStyle: .alert)
 
         alert.addTextField { (textField) in
@@ -132,7 +132,7 @@ class EventHomeController: UICollectionViewController{
             textField.text = item.date
             textField.inputView = self.datePicker
             let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(self.dateUpdateValueChanged))
-            let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 44))
+            let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 80))
             toolBar.setItems([UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil), doneButton], animated: true)
             textField.inputAccessoryView = toolBar
         }
@@ -145,21 +145,26 @@ class EventHomeController: UICollectionViewController{
             let description = textFields[1].text,
             let url = textFields[2].text {
                 
-                let eventData = EventDataDTO(title: title, eventDescription:  description, url: url, date: self.formatter.string(from: self.datePicker.date), identifier: item.identifier)
+                item.title = title
+                item.eventDescription = description
+                item.url = url
+                item.date = self.formatter.string(from: self.datePicker.date)
 
-                self.updateEvent(item: eventData)
-
+                self.updateEvent(item: item)
             }
-            
-        
-            
-            
         }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            self.alert.dismiss(animated: true)
+        }
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action) -> Void in
+            self.deleteEvent(item: item)
             self.alert.dismiss(animated: true)
         }
 
         alert.addAction(submitAction)
+        alert.addAction(deleteAction)
         alert.addAction(cancelAction)
 
         present(alert, animated: true)
@@ -203,20 +208,13 @@ class EventHomeController: UICollectionViewController{
     }
 
 
-    func updateEvent(item: EventDataDTO) {
+    func updateEvent(item: EventEntity) {
         
-        let eventTitle = item.title
-        let eventDescription = item.eventDescription
-        let url = item.url
-        let date = item.date
-        let identifier = item.identifier
-
-//        _ = EventEntity.init(title: eventTitle, eventDescription: eventDescription, url: url, date: date, identifier: identifier, insertIntoManagedObjectContext: self.context)
-
         do
         {
             try self.context.save()
             fetchData()
+            self.collectionView.reloadData()
 
         }
         catch let error as NSError {
@@ -226,6 +224,23 @@ class EventHomeController: UICollectionViewController{
     
     }
     
+    func deleteEvent(item: EventEntity) {
+        do
+        {
+            try self.context.delete(item)
+            
+            do {
+                try context.save()
+                fetchData()
+                self.collectionView.reloadData()
+            }catch {
+                //error
+            }
+        }
+        catch let error as NSError {
+            print("Delete failed. \(error), \(error.userInfo)")
+        }
+    }
     
     func fetchData()
     {
@@ -238,14 +253,7 @@ class EventHomeController: UICollectionViewController{
             rowCount = data.count
             
             for entry in data {
-                
-                let title = entry.title!
-                let description = entry.eventDescription!
-                let url = entry.url!
-                let date = entry.date!
-                let identifier = entry.identifier!
-               
-                historyData.append(EventDataDTO(title: title, eventDescription:  description, url: url, date: date, identifier: identifier))
+                historyData.append(entry)
             }
             
             
