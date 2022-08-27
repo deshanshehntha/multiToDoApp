@@ -151,43 +151,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1HQ-uU-FDO">
-                            <size key="itemSize" width="359" height="90"/>
+                            <size key="itemSize" width="284" height="90"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="6EV-0d-CaD">
-                                <rect key="frame" x="8" y="50" width="398" height="90"/>
+                                <rect key="frame" x="47.5" y="50" width="319" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1DF-xn-cR9">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="319" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-EV-oJq">
-                                            <rect key="frame" x="17" y="21" width="100" height="48"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-EV-oJq">
+                                            <rect key="frame" x="16" y="21" width="97" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foj-Q7-CZY">
-                                            <rect key="frame" x="125" y="39" width="97" height="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyL-Mq-qN5">
+                                            <rect key="frame" x="121" y="35" width="121" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEx-Od-Fzv">
-                                            <rect key="frame" x="309" y="30" width="50" height="31"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox3-D6-X15">
+                                            <rect key="frame" x="222" y="30" width="89" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" image="bin.xmark.fill" catalog="system" title="">
-                                                <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                            </buttonConfiguration>
+                                            <buttonConfiguration key="configuration" style="gray" title="Delete"/>
                                         </button>
                                     </subviews>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="398" height="90"/>
+                                <size key="customSize" width="319" height="90"/>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionReusableView" id="Mql-MW-Fec">
@@ -195,10 +194,10 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1h-CS-sdK">
-                                    <rect key="frame" x="336" y="12" width="28" height="27"/>
+                                    <rect key="frame" x="276" y="10" width="106" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="">
+                                    <buttonConfiguration key="configuration" style="filled" title="Add New">
                                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                     </buttonConfiguration>
@@ -267,7 +266,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="IDj-8h-AHz"/>
                     <connections>
-                        <outlet property="dateInput" destination="BGr-91-vjy" id="7mf-4l-ldw"/>
                         <outlet property="eventDescriptionInput" destination="JX5-UQ-pOi" id="IkI-Pc-cKI"/>
                         <outlet property="eventTitleInput" destination="Y0a-0W-Yxg" id="mvU-QN-Ee5"/>
                         <outlet property="urlInput" destination="vXr-re-rBP" id="mNH-zx-lR4"/>
@@ -299,14 +297,34 @@
                     <view key="view" contentMode="scaleToFill" id="noV-zt-vJL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yl8-k1-Yg4">
+                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql7-Jl-P8L">
+                                <rect key="frame" x="317" y="125" width="48" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus.square.on.square" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="onClickAddItem:" destination="lmU-lL-wCL" eventType="touchUpInside" id="pM8-wk-BiW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pFy-pd-5dC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Get things done with ToDo" id="2q4-So-bo6"/>
+                    <connections>
+                        <outlet property="AddItemButton" destination="Ql7-Jl-P8L" id="3k5-pN-Edn"/>
+                        <outlet property="SubView" destination="Yl8-k1-Yg4" id="qID-ca-OZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGj-30-m9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-988" y="165"/>
+            <point key="canvasLocation" x="-988.40579710144937" y="164.73214285714286"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="5Tc-dy-L2W">
@@ -347,17 +365,13 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="bin.xmark.fill" catalog="system" width="128" height="93"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="109"/>
         <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <image name="hands.sparkles.fill" catalog="system" width="125" height="128"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.square.on.square" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
