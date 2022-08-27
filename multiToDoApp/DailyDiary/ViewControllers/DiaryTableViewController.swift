@@ -33,7 +33,6 @@ class DiaryTableViewController: UITableViewController {
         
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let diaryCell = tableView.dequeueReusableCell(withIdentifier: "DiaryDataIdentifier", for: indexPath)
         as! DiaryCell

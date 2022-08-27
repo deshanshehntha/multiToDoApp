@@ -76,41 +76,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVn-5b-81O" userLabel="Add Button">
-                                <rect key="frame" x="20" y="222.5" width="49.5" height="29"/>
+                                <rect key="frame" x="20" y="222.5" width="141" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Open Your Diary">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fJp-Lk-xvm" kind="show" identifier="newDiaryEntry" id="12H-ws-dtj"/>
+                                    <segue destination="yIU-8b-HMf" kind="show" id="NPV-rI-gFG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGr-Jo-CSZ">
-                                <rect key="frame" x="89.5" y="222.5" width="48" height="29"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="List">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="yIU-8b-HMf" kind="show" id="Egc-y3-VHt"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7408" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-r3-Eti">
+                                <rect key="frame" x="82" y="333" width="250" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zB1-O8-y2F"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MCI-9O-320" firstAttribute="top" secondItem="zB1-O8-y2F" secondAttribute="top" constant="10" id="1ku-2d-dyD"/>
-                            <constraint firstItem="DGr-Jo-CSZ" firstAttribute="top" secondItem="pth-JS-hgL" secondAttribute="bottom" constant="20" id="7gm-1N-EAs"/>
+                            <constraint firstItem="IVn-5b-81O" firstAttribute="top" secondItem="pth-JS-hgL" secondAttribute="bottom" constant="20" id="B4W-0r-HrZ"/>
                             <constraint firstItem="MCI-9O-320" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="DZO-C3-vWK"/>
-                            <constraint firstItem="DGr-Jo-CSZ" firstAttribute="leading" secondItem="IVn-5b-81O" secondAttribute="trailing" constant="20" id="EtZ-ix-TCA"/>
                             <constraint firstItem="pth-JS-hgL" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="Nd1-HD-shk"/>
-                            <constraint firstItem="IVn-5b-81O" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="V35-8r-rsM"/>
                             <constraint firstItem="pth-JS-hgL" firstAttribute="top" secondItem="mns-SW-pPh" secondAttribute="bottom" constant="10" id="X4r-ws-YQI"/>
                             <constraint firstItem="mns-SW-pPh" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="bTc-lI-kRy"/>
                             <constraint firstItem="zB1-O8-y2F" firstAttribute="trailing" secondItem="mns-SW-pPh" secondAttribute="trailing" constant="80" id="e8J-Re-V73"/>
                             <constraint firstItem="mns-SW-pPh" firstAttribute="top" secondItem="MCI-9O-320" secondAttribute="bottom" constant="40" id="gt0-KI-Xsb"/>
                             <constraint firstItem="zB1-O8-y2F" firstAttribute="trailing" secondItem="MCI-9O-320" secondAttribute="trailing" constant="80" id="oaa-L0-2UE"/>
-                            <constraint firstItem="IVn-5b-81O" firstAttribute="top" secondItem="pth-JS-hgL" secondAttribute="bottom" constant="20" id="xX8-0u-8qy"/>
+                            <constraint firstItem="IVn-5b-81O" firstAttribute="leading" secondItem="zB1-O8-y2F" secondAttribute="leading" constant="20" id="v7k-Op-s13"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="auq-Q3-oQB"/>
@@ -139,7 +132,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-gw-Ekz">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-gw-Ekz">
                                 <rect key="frame" x="20" y="161" width="374" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </datePicker>
@@ -366,7 +359,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9M-Ad-NQo">
-                                            <rect key="frame" x="40" y="11" width="65" height="14"/>
+                                            <rect key="frame" x="40" y="11" width="334" height="13.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -374,6 +367,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Y9M-Ad-NQo" firstAttribute="leading" secondItem="1uG-r2-4A3" secondAttribute="leadingMargin" constant="20" id="566-vV-nfR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Y9M-Ad-NQo" secondAttribute="trailing" constant="20" id="uEZ-nb-u1n"/>
                                         <constraint firstItem="Y9M-Ad-NQo" firstAttribute="top" secondItem="1uG-r2-4A3" secondAttribute="topMargin" id="xKl-pV-QZN"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -387,25 +381,42 @@
                             <outlet property="delegate" destination="yIU-8b-HMf" id="iSH-Ea-JGM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wtb-tl-zR0"/>
+                    <navigationItem key="navigationItem" id="Wtb-tl-zR0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="bZV-Vh-Fay">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Hms-Ts-3rk">
+                                <rect key="frame" x="347.5" y="5" width="46.5" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" imagePadding="0.0">
+                                    <attributedString key="attributedTitle"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.9474053039" blue="0.089836642430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fJp-Lk-xvm" kind="show" identifier="AddDiaryEntry" id="Ipz-o7-7YR"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="fJp-Lk-xvm" kind="show" identifier="editDiaryEntry" id="q2P-Ik-rm9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9W-GN-EV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1032" y="195"/>
+            <point key="canvasLocation" x="-1033.3333333333335" y="194.86607142857142"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="12H-ws-dtj"/>
+        <segue reference="Ipz-o7-7YR"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="7408" width="3500" height="2500"/>
         <image name="HeaderBg" width="960" height="540"/>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="chart.pie" catalog="system" width="128" height="121"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sparkles" catalog="system" width="112" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

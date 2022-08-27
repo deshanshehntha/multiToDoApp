@@ -15,24 +15,11 @@ class DiaryAddViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var descriptionField: UITextView!
     var selectedDiaryEntry: DiaryItemList? = nil
-        
-    
-    //Variables
-    var createdAt: Date?
-    var diaryDescription: String?
-    var diaryData : DiaryItemList?
-    var context: NSManagedObjectContext? {
-        guard let appDelegate =
-        UIApplication.shared.delegate as? AppDelegate else {
-            return nil
-        }
-        return appDelegate.persistentContainer.viewContext
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-//        viewStoredData()
+        viewStoredData()
         
         if(selectedDiaryEntry != nil)
         {
@@ -40,7 +27,6 @@ class DiaryAddViewController: UIViewController {
             descriptionField.text = selectedDiaryEntry?.diaryDescription
         }
 
-       
     }
     
     //Hide the keyboard
@@ -53,7 +39,6 @@ class DiaryAddViewController: UIViewController {
     @objc func hideKeyboard() {
             view.endEditing(true)
         }
-    
 
     
     // Add Record
@@ -104,6 +89,7 @@ class DiaryAddViewController: UIViewController {
             }
         }
     
+    
     // Delete Record
     @IBAction func deleteDiaryEntry(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -153,35 +139,36 @@ class DiaryAddViewController: UIViewController {
 }
     
 
-//
-//    // View Stored data
-//    func viewStoredData()
-//    {
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"DiaryItemList")
-//        do
-//        {
-//            let diaryData = try self.context?.fetch(request) as! [DiaryItemList]
-//            if(diaryData.count > 0 ){
-//
-//                diaryData.forEach {diaryDataObj in
-//
-//                     print("------------Diary--------------")
-//                     print("Id",diaryDataObj.id ?? "")
-//                     print("Created At:", diaryDataObj.createdAt)
-//                     print("Diary Description:", diaryDataObj.diaryDescription)
-//                }
-//
-//
-//            }
-//            else
-//            {
-//                print("No results found")
-//            }
-//        }
-//        catch
-//        {
-//            print("Error in fetching items")
-//        }
-//    }
+
+    // View Stored data
+    func viewStoredData()
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"DiaryItemList")
+        do
+        {
+            let diaryData = try context.fetch(request) as! [DiaryItemList]
+            if(diaryData.count > 0 ){
+
+                diaryData.forEach {diaryDataObj in
+
+                    print("------------Diary--------------")
+                    print("Id",diaryDataObj.id ?? "")
+                    print("Created At:", diaryDataObj.createdAt ?? "00/00/0000-00:00:00")
+                    print("Diary Description:", diaryDataObj.diaryDescription ?? "Test")
+                }
+
+            }
+            else
+            {
+                print("No results found")
+            }
+        }
+        catch
+        {
+            print("Error in fetching items")
+        }
+    }
 
 

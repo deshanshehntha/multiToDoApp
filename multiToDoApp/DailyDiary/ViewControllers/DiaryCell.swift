@@ -12,4 +12,5 @@ class DiaryCell: UITableViewCell
 {
     
     @IBOutlet weak var diaryDescription: UILabel!
+    
 }
