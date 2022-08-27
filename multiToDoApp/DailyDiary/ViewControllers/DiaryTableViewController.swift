@@ -28,26 +28,34 @@ class DiaryTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        let image = UIImage(named: "HeaderBg.jpg")
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundImage = UIImage(named: "HeaderBg.jpg")
+        
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
+        
         super.viewDidLoad()
         self.fetchDiaryData()
         
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let diaryCell = tableView.dequeueReusableCell(withIdentifier: "DiaryDataIdentifier", for: indexPath)
         as! DiaryCell
-
+        
         let thisDiary: DiaryItemList!
         thisDiary = diaryDataList[indexPath.row]
         diaryCell.diaryDescription.text = thisDiary.diaryDescription
         return diaryCell
     }
     
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return diaryDataList.count
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -69,11 +77,11 @@ class DiaryTableViewController: UITableViewController {
                     diaryDataList.append(diary)
                 }
             }
-                catch
-                {
-                    print("Fetch Failed!!!")
-                }
+            catch
+            {
+                print("Fetch Failed!!!")
             }
+        }
         
         
     }
@@ -96,7 +104,7 @@ class DiaryTableViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-
-   
-
+    
+    
+    
 }
