@@ -18,6 +18,7 @@
 		485E02AD28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E02AB28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift */; };
 		485E02AF28B7E11900DD1084 /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E02AE28B7E11900DD1084 /* DiaryCell.swift */; };
 		48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */; };
+		AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F71F528B7693400F719F8 /* TrackerViewController.swift */; };
 		AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18728AA963D00CA9FCD /* AppDelegate.swift */; };
 		AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */; };
 		AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E18B28AA963D00CA9FCD /* ViewController.swift */; };
@@ -27,6 +28,10 @@
 		AD36E19F28AA964000CA9FCD /* multiToDoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E19E28AA964000CA9FCD /* multiToDoAppTests.swift */; };
 		AD36E1A928AA964000CA9FCD /* multiToDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1A828AA964000CA9FCD /* multiToDoAppUITests.swift */; };
 		AD36E1AB28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */; };
+		AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290928B718EF0008C376 /* CreateEventController.swift */; };
+		AD6A290C28B71EEE0008C376 /* EventHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A290B28B71EEE0008C376 /* EventHomeController.swift */; };
+		AD8AC43528B7C5270078A47F /* EventEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AC43328B7C5270078A47F /* EventEntity+CoreDataClass.swift */; };
+		AD8AC43628B7C5270078A47F /* EventEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AC43428B7C5270078A47F /* EventEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,7 @@
 		485E02AB28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryItemList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		485E02AE28B7E11900DD1084 /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
 		48BF4EF328B2088B00D0CCAA /* DiaryMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMainViewController.swift; sourceTree = "<group>"; };
+		AD1F71F528B7693400F719F8 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		AD36E18428AA963D00CA9FCD /* multiToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E18728AA963D00CA9FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD36E18928AA963D00CA9FCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,10 @@
 		AD36E1A428AA964000CA9FCD /* multiToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multiToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36E1A828AA964000CA9FCD /* multiToDoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITests.swift; sourceTree = "<group>"; };
 		AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiToDoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD6A290928B718EF0008C376 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
+		AD6A290B28B71EEE0008C376 /* EventHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeController.swift; sourceTree = "<group>"; };
+		AD8AC43328B7C5270078A47F /* EventEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		AD8AC43428B7C5270078A47F /* EventEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +148,17 @@
 			path = DailyDiary;
 			sourceTree = "<group>";
 		};
+		AD11C30028B2829E002A6946 /* EventManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD8AC43328B7C5270078A47F /* EventEntity+CoreDataClass.swift */,
+				AD8AC43428B7C5270078A47F /* EventEntity+CoreDataProperties.swift */,
+				AD6A290928B718EF0008C376 /* CreateEventController.swift */,
+				AD6A290B28B71EEE0008C376 /* EventHomeController.swift */,
+			);
+			path = EventManager;
+			sourceTree = "<group>";
+		};
 		AD36E17B28AA963D00CA9FCD = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +182,8 @@
 		AD36E18628AA963D00CA9FCD /* multiToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				AD6A290F28B768C20008C376 /* Tracker */,
+				AD11C30028B2829E002A6946 /* EventManager */,
 				48BF4EF028B2009B00D0CCAA /* DailyDiary */,
 				16CF661628B1E40500094ECB /* ToDoList */,
 				AD36E18728AA963D00CA9FCD /* AppDelegate.swift */,
@@ -190,6 +213,14 @@
 				AD36E1AA28AA964000CA9FCD /* multiToDoAppUITestsLaunchTests.swift */,
 			);
 			path = multiToDoAppUITests;
+			sourceTree = "<group>";
+		};
+		AD6A290F28B768C20008C376 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F71F528B7693400F719F8 /* TrackerViewController.swift */,
+			);
+			path = Tracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				485E02A928B7DCDC00DD1084 /* DiaryTableViewController.swift in Sources */,
+				AD6A290A28B718EF0008C376 /* CreateEventController.swift in Sources */,
 				1663DEAE28B5467B000E0FDB /* ToDoListItemTab+CoreDataClass.swift in Sources */,
 				AD36E18C28AA963D00CA9FCD /* ViewController.swift in Sources */,
 				485E02AF28B7E11900DD1084 /* DiaryCell.swift in Sources */,
@@ -332,8 +364,12 @@
 				485E02AD28B7DE3100DD1084 /* DiaryItemList+CoreDataProperties.swift in Sources */,
 				48BF4EF428B2088B00D0CCAA /* DiaryMainViewController.swift in Sources */,
 				1663DEAF28B5467B000E0FDB /* ToDoListItemTab+CoreDataProperties.swift in Sources */,
+				AD8AC43628B7C5270078A47F /* EventEntity+CoreDataProperties.swift in Sources */,
+				AD8AC43528B7C5270078A47F /* EventEntity+CoreDataClass.swift in Sources */,
 				16CF661A28B1EFFA00094ECB /* ToDoListController.swift in Sources */,
 				1663DEA728B54534000E0FDB /* ToDoListModel.xcdatamodeld in Sources */,
+				AD1F71F628B7693400F719F8 /* TrackerViewController.swift in Sources */,
+				AD6A290C28B71EEE0008C376 /* EventHomeController.swift in Sources */,
 				AD36E18828AA963D00CA9FCD /* AppDelegate.swift in Sources */,
 				AD36E18A28AA963D00CA9FCD /* SceneDelegate.swift in Sources */,
 				485E029D28B666D700DD1084 /* DiaryAddViewController.swift in Sources */,
@@ -511,8 +547,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YGYP3WSCJX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = multiToDoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -527,6 +565,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.multiToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,8 +577,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YGYP3WSCJX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = multiToDoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -554,6 +595,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.multiToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
