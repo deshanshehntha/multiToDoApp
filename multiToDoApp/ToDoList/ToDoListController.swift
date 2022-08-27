@@ -45,6 +45,7 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
         listTableView.delegate = self
         listTableView.dataSource = self
         listTableView.frame = view.bounds
+        self.addDummyData()
         getAllListItems()
 
     }
@@ -241,5 +242,9 @@ class ToDoListController: UIViewController ,UITableViewDelegate, UITableViewData
             //error
         }
     }
-
+    func addDummyData(){
+        createToDoItem(note: "Exam", noteDesc: "Big Data", plannedDate: Date(), status: "Initial")
+        createToDoItem(note: "Cleaning", noteDesc: "Room", plannedDate: Date(), status: "In Progress")
+    }
+    
 }
