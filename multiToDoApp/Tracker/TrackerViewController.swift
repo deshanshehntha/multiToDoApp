@@ -50,7 +50,7 @@ class TrackerViewController: UIViewController{
             todo1.text = ""
             todo2.text = ""
             todo3.text = ""
-        } else if(todoList.count > 3) {
+        } else if(todoList.count >= 3) {
             todo1.text = todoList[0].note!
             todo2.text = todoList[1].note!
             todo3.text = todoList[2].note!
@@ -60,7 +60,7 @@ class TrackerViewController: UIViewController{
             event1.text = ""
             event2.text = ""
             event3.text = ""
-        } else if(eventList.count > 3) {
+        } else if(eventList.count >= 3) {
             event1.text = eventList[0].title!
             event2.text = eventList[1].title!
             event3.text = eventList[2].title!
